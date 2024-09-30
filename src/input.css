@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.angled-line::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%; /* Dvojitá šířka pro pokrytí */
+  height: 1px; /* Tloušťka čáry */
+  background-color: #d25c33;
+  transform: rotate(-16deg); /* Otočení o 16 stupňů */
+  z-index: -10;
+}
