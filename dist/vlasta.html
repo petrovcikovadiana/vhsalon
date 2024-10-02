@@ -5,10 +5,297 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vlasta barbershop</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.getElementById("menu-toggle");
+            const menuItems = document.getElementById("menu-items");
+
+            menuToggle.addEventListener("click", function () {
+                menuItems.classList.toggle("hidden");
+            });
+            feather.replace();
+
+        });
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-black">
+    <nav class="flex flex-col bg-vlastaNav font-macondo">
+        <!-- Navbar -->
+        <div class="flex flex-row justify-between items-center h-16 px-4">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 relative z-20">
+                <img src="./img/vlasta/SmartSelectImage_2018-02-02-00-19-23 (1).webp" alt="logo" class="w-20 h-20">
+            </div>
 
+            <!-- Hamburger Menu Button -->
+            <button id="menu-toggle" class="md:hidden focus:outline-none">
+                <svg id="menu-icon" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+            <!-- Contact - hidden on mobile -->
+            <div class="hidden md:flex relative z-20">
+                <!-- socials -->
+                <div class="flex text-[20px] gap-x-3 max-w-max mx-auto lg:mx-0">
+                    <a href="https://github.com/petrovcikovadiana" class="w-6 h-6 flex items-center justify-center">
+                        <img src="./img/vlasta/fb.svg" alt="facebook" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/diana-petrov%C4%8D%C3%ADkov%C3%A1-a6034a1b2/"
+                        class="w-6 h-6 flex items-center justify-center">
+                        <img src="./img/vlasta/ig.svg" alt="facebook" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/diana-petrov%C4%8D%C3%ADkov%C3%A1-a6034a1b2/"
+                        class="w-6 h-6 flex items-center justify-center">
+                        <img src="./img/vlasta/wa.svg" alt="facebook" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Items -->
+        <div id="menu-items"
+            class="md:flex md:h-16 items-center w-full justify-start md:justify-center md:absolute z-10 hidden ">
+            <ul class="flex flex-col md:flex-row md:space-x-4 items-start pl-5">
+                <li><a href="#home" class="block py-2 px-4 text-black">Domů</a></li>
+                <li><a href="#pricing" class="block py-2 px-4 text-black">Ceník</a></li>
+                <li><a href="#contact" class="block py-2 px-4 text-black">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Start -->
+    <div class="relative min-h-screen font-macondo">
+        <!-- Background image with opacity -->
+        <div class="absolute inset-0 bg-[url('./img/vlasta/apothekary.webp')] bg-cover bg-center opacity-30">
+        </div>
+
+        <!-- Text content -->
+        <div class="relative z-10 flex items-center justify-center min-h-screen">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold text-vlastaNav max-w-lg">Váš styl, naše řemeslo -
+                    <span>precizní barber služby</span>
+                </h1>
+                <p class="text-lg text-white mt-4">Náš barbershop nabízí profesionální pánské střihy, holení a péči o
+                    vousy.</p>
+                <!-- Reservation button -->
+                <button
+                    class="mt-8 px-6 py-3 uppercase bg-vlastaNav text-black text-lg font-semibold rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out">
+                    Rezervace
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- hero end -->
+    <!-- pricing start -->
+    <div class="flex flex-row h-screen bg-massageBg font-macondo">
+        <div class="w-1/3 hidden md:flex">
+            <img src="./img/vlasta/jonathan-weiss-1wT1EcGXKBk-unsplash_2_11zon.webp" class="h-screen">
+        </div>
+        <!-- right container -->
+        <div class="w-2/3 mx-auto">
+            <div className="flex md:flex-row flex-col gap-4 items-center mx-auto w-full justify-center">
+                <div class="flex md:w-[600px] mx-auto my-16 ">
+                    <div class="w-full bg-background md:m-10">
+                        <!-- title -->
+                        <h3 class="uppercase text-2xl text-vlastaNav tracking-widest font-bold mb-10">Ceník</h3>
+
+                        <div class="flex flex-row justify-between my-5 ">
+                            <div class="flex flex-col ">
+                                <h2 class="text-xl font-medium text-textWhite uppercase">
+                                    Střih </h2>
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <p class="text-xl text-textWhite justify-center">
+                                    450 Kč
+                                </p>
+                            </div>
+                        </div>
+                        <hr class="h-px w-80 md:w-[520px] mx-auto bg-textGrey border-0 mb-2">
+                        <div class="flex flex-row justify-between my-5">
+                            <div class="flex flex-col ">
+                                <h2 class="text-xl font-medium text-textWhite uppercase">
+                                    Střih s vousy </h2>
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <p class="text-xl text-textWhite justify-center">
+                                    450 Kč
+                                </p>
+                            </div>
+                        </div>
+                        <hr class="h-px w-80 md:w-[520px] mx-auto bg-textGrey border-0 mb-2">
+
+                        <div class="flex flex-row justify-between my-5">
+                            <div class="flex flex-col ">
+                                <h2 class="text-xl font-medium text-textWhite uppercase">
+                                    Vousy </h2>
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <p class="text-xl text-textWhite justify-center">
+                                    450 Kč
+                                </p>
+                            </div>
+                        </div>
+                        <hr class="h-px w-80 md:w-[520px] mx-auto bg-textGrey border-0 mb-2">
+
+                        <div class="flex flex-row justify-between my-5">
+                            <div class="flex flex-col ">
+                                <h2 class="text-xl font-medium text-textWhite uppercase">
+                                    Pánská pedikúra </h2>
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <p class="text-xl text-textWhite justify-center">
+                                    450 Kč
+                                </p>
+                            </div>
+                        </div>
+                        <hr class="h-px w-80 md:w-[520px] mx-auto bg-textGrey border-0 mb-2">
+
+                        <div class="flex flex-row justify-between my-5">
+                            <div class="flex flex-col ">
+                                <h2 class="text-xl font-medium text-textWhite uppercase">
+                                    Pánská manikúra </h2>
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <p class="text-xl text-textWhite justify-center">
+                                    450 Kč
+                                </p>
+                            </div>
+                        </div>
+                        <hr class="h-px w-80 md:w-[520px] mx-auto bg-textGrey border-0 mb-2">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- pricing end -->
+    <!-- gallery section -->
+    <section>
+        <div class="flex items-center justify-center bg-massageBg font-macondo">
+
+            <div class="bg-massageBg p-6 m-3 space-y-6 md:p-24">
+                <!-- title -->
+                <div class="flex flex-col items-center justify-center mx-auto">
+                    <h3 class="uppercase text-2xl text-vlastaNav tracking-widest font-bold">Galerie</h3>
+                </div>
+                <div class="flex flex-col justify-between space-y-5 md:flex-row md:space-y-0"></div>
+
+                <div class="grid gap-5 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                    <div class="relative group">
+                        <img src="img/vlasta/246685542_2998971307031176_7719660163735151899_n_3_11zon.webp" alt=""
+                            class="w-72 h-72" />
+
+                    </div>
+
+                    <div class="relative group">
+                        <img src="img/vlasta/20211017_183140_4_11zon.webp" alt="" class="w-72 h-72" />
+
+
+                    </div>
+
+                    <div class="relative group">
+                        <img src="img/vlasta/mitchell-orr-dcAw8Ms-teQ-unsplash_5_11zon.webp" alt="" class="w-72 h-72" />
+
+
+                    </div>
+                    <div class="relative group">
+                        <img src="img/vlasta/70841118_2381017045493275_8774339201832321024_n_1_11zon.webp" alt=""
+                            class="w-72 h-72" />
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-vlastaNav">
+        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+            <div class="md:flex items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="https://eclipse.cloudylake.io/" class="flex items-center">
+                        <img src="./img/vlasta/SmartSelectImage_2018-02-02-00-19-23 (1).webp" alt="logo"
+                            class="w-28 h-24">
+                    </a>
+                </div>
+                <div class="flex md:flex-row flex-col gap-10 items-center mx-auto">
+                    <div class="flex flex-row gap-5 items-center">
+                        <img src="./img/vlasta/clock-seven-svgrepo-com.svg" alt="hours">
+                        </img>
+                        <div class="flex flex-col text-background text-sm">
+                            <p>Po - Pá : 8:00 - 18:00</p>
+                            <p>So : 8:00 - 13:00</p>
+                        </div>
+
+                    </div>
+                    <div class="hidden md:block h-10 min-h-[1em] w-0.5 self-stretch bg-lightBlack">
+                    </div>
+                    <div class="flex flex-row gap-5 items-center">
+                        <img src="./img/vlasta/location-pin-svgrepo-com.svg" alt="location">
+
+                        </img>
+                        <div class="flex flex-col text-background text-sm">
+                            <p>Parížská 524/1,</p>
+                            <p>Mladá Boleslav 09 299</p>
+                        </div>
+
+                    </div>
+                    <div class="hidden md:block h-10 min-h-[1em] w-0.5 self-stretch bg-lightBlack">
+                    </div>
+                    <div class="flex flex-col">
+
+                        <div class="flex flex-row gap-5 ">
+                            <img src="./img/vlasta/phone-svgrepo-com.svg" alt="phone">
+
+                            </img>
+
+                            <div class="flex flex-col text-background text-sm">
+                                <p>+420 999 999 999</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="hidden md:block h-10 min-h-[1em] w-0.5 self-stretch bg-lightBlack">
+                    </div>
+                    <div class="flex flex-row gap-5 ">
+                        <img src="./img/vlasta/mail-svgrepo-com.svg" alt="mail" class=" text-sm font-semibold">
+
+                        </img>
+
+                        <div class="flex flex-col text-background text-sm">
+                            <p>vh7777@seznam.cz</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5 border-lightBlack sm:mx-auto lg:my-8" />
+            <div class="flex items-center mx-auto text-center">
+                <span class="text-xs text-lightBlack text-center mx-auto">
+                    © 2024
+                    <a href="https://eclipse.cloudylake.io/" class="hover:underline">
+                        CloudyLake.
+                    </a>
+                    All Rights Reserved.
+                </span>
+
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

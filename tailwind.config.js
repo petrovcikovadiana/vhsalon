@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         joan: ['"Joan"', "serif"],
+        macondo: ['"Macondo"', "cursive"],
       },
 
       colors: {
@@ -18,6 +19,10 @@ module.exports = {
         beautyBg: "#ECE2DD",
         beautyText: "#D25C33",
         beautyFooter: "#F0DAD1",
+        massageBg: "#212121",
+        massageText: "#A8907B",
+        massageCard: "#2C2C2E",
+        vlastaNav: "#AA9980",
       },
     },
   },
