@@ -6,9 +6,276 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barbershop Říčany</title>
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.getElementById("menu-toggle");
+            const menuItems = document.getElementById("menu-items");
+
+            menuToggle.addEventListener("click", function () {
+                menuItems.classList.toggle("hidden");
+            });
+            feather.replace();
+
+        });
+    </script>
+
 </head>
 
-<body>
+<body class="bg-massageCard">
+    <nav class="flex flex-col fixed z-20 w-full bg-barberText">
+        <!-- Navbar -->
+        <div class="container mx-auto flex flex-row justify-between items-center h-20 px-4 ">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 relative z-20 flex-shrink-0">
+                <img src="./img/barber/Barber-ricany2.svg" alt="logo" class="w-20">
+            </div>
+
+            <!-- Hamburger Menu Button -->
+            <button id="menu-toggle" class="md:hidden focus:outline-none">
+                <svg id="menu-icon" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+        </div>
+
+        <!-- Menu Items -->
+        <div id="menu-items"
+            class="md:flex md:h-20 items-center w-full justify-start md:justify-center md:absolute z-10 hidden ">
+            <ul class="flex flex-col md:flex-row md:space-x-4 items-start pl-5">
+                <li><a href="#home" class="block py-2 px-4 text-background">Domů</a></li>
+                <li><a href="#pricing" class="block py-2 px-4 text-background">Ceník</a></li>
+                <li><a href="#contact" class="block py-2 px-4 text-background">Kontakt</a></li>
+            </ul>
+        </div>
+
+
+    </nav>
+
+    <!-- hero start -->
+    <section id="home" class=" relative bg-massageCard flex items-center overflow-y-hidden ">
+        <div class=" mx-auto flex flex-row md:px-44 md:gap-32">
+            <!-- left container -->
+            <div class="flex flex-col gap-y-8 md:gap-x-12 pt-56">
+                <!-- introduction text -->
+                <div class="flex-1 text-center items-center  lg:text-left">
+                    <div class="flex flex-row gap-2 text-center items-center">
+                        <hr class="hidden md:block h-px w-16 bg-textWhite border-0">
+                        <p class="text-xs text-textWhite items-center leading-[0.8] uppercase mx-auto md:mx-0">
+                            Prague, Czech Republic
+                        </p>
+                    </div>
+
+                    <div class="text-5xl mb-12 mt-2 leading-[1] max-w-sm">
+                        <h1 class="text-textWhite max-w-lg">Váš osobní barber <span class="text-barberText">pro
+                                perfektní vzhled</span></h1>
+                    </div>
+
+                    <div class="flex max-w-max gap-x-6 items-center mb-6 mx-auto lg:mx-0">
+                        <!-- buttons -->
+                        <button
+                            class="w-36 h-10 overflow-hidden bg-barberText uppercase  text-background before:ease relative before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-40">
+                            <span relative="relative z-10 ">Rezervace</span>
+                        </button>
+                        <a href="#pricing">
+                            <button
+                                class="w-36 h-10 overflow-hidden uppercase bg-massageCard border-2 border-barberText text-barberText before:ease relative before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-40">
+                                <span relative="relative z-10 ">Ceník</span>
+                            </button>
+                        </a>
+                    </div>
+                    <!-- Contact - -->
+                    <div class="relative z-20">
+                        <!-- socials -->
+                        <div class="flex text-[20px] gap-x-3 max-w-max mx-auto lg:mx-0">
+                            <a href="https://github.com/petrovcikovadiana"
+                                class="w-6 h-6 flex items-center justify-center">
+                                <img src="./img/barber/fb.svg" alt="facebook" />
+                            </a>
+                            <a href="https://www.linkedin.com/in/diana-petrov%C4%8D%C3%ADkov%C3%A1-a6034a1b2/"
+                                class="w-6 h-6 flex items-center justify-center">
+                                <img src="./img/barber/ig.svg" alt="facebook" />
+                            </a>
+                            <a href="https://www.linkedin.com/in/diana-petrov%C4%8D%C3%ADkov%C3%A1-a6034a1b2/"
+                                class="w-6 h-6 flex items-center justify-center">
+                                <img src="./img/barber/wa.svg" alt="facebook" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- right container -->
+            <div class="hidden lg:flex flex-1 max-w-[320px] lg:max-w-[482px]">
+                <div class="hidden md:flex">
+                    <div class="flex flex-row gap-5">
+                        <img src="./img/barber/delfina-pan-8esvJeVUdes-unsplash_11zon.webp" alt="hero" class=" mt-1 ">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- hero end -->
+
+    <!-- pricing section -->
+    <section id="pricing">
+        <div className="flex md:flex-row flex-col gap-4 mx-auto md:w-full justify-center bg-massageCard">
+
+            <div class="flex w-96 md:w-[600px] mx-auto my-16 bg-massageCard border-2 border-barberText">
+                <div class="w-full bg-massageCard rounded-2xl m-8 md:m-10">
+                    <div class="flex flex-col items-center mx-auto">
+                        <img src="./img/barber/logo.svg" alt="face" class="object-fit h-24 md:h-32 md:w-32 " />
+                    </div>
+                    <div class="flex flex-row justify-between my-5">
+                        <div class="flex flex-col ">
+                            <h2 class=" text-xl font-medium text-barberText">
+                                Střih (mytí & styling) </h2>
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <p class="text-md text-barberText justify-center">
+                                500 Kč
+                            </p>
+                        </div>
+                    </div>
+                    <hr class="h-px w-80 md:w-[520px] bg-textGrey border-0 mb-2">
+                    <div class="flex flex-row justify-between my-5">
+                        <div class="flex flex-col ">
+                            <h2 class=" text-xl font-medium text-barberText">
+                                Střih & vousy & hot towel </h2>
+
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <p class="text-md text-barberText justify-center">
+                                800 Kč
+                            </p>
+                        </div>
+                    </div>
+                    <hr class="h-px w-80 md:w-[520px] bg-textGrey border-0 mb-2">
+
+                    <div class="flex flex-row justify-between my-5">
+                        <div class="flex flex-col ">
+                            <h2 class="text-xl font-medium text-barberText">
+                                Vousy & hot towel </h2>
+
+
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <p class="text-md text-barberText justify-center">
+                                350 Kč
+                            </p>
+                        </div>
+                    </div>
+                    <hr class="h-px w-80 md:w-[520px] bg-textGrey border-0 mb-2">
+
+                    <div class="flex flex-row justify-between my-5">
+                        <div class="flex flex-col ">
+                            <h2 class="text-xl font-medium text-barberText">
+                                Depilace voskem </h2>
+
+
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <p class="text-md text-barberText justify-center">
+                                100 Kč
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- pricing end -->
+    <!-- footer start -->
+    <footer id="contact" class="bg-massageCard">
+        <div class="mx-auto w-full max-w-screen-xl py-6 lg:py-8">
+            <div class="md:flex items-center justify-between">
+
+                <div class="flex md:flex-row flex-col mx-auto items-center">
+                    <div class="flex flex-row items-center">
+
+                        <div class="flex flex-col text-center md:text-start text-background max-w-56">
+                            <h3 class="text-3xl text-textWhite mb-5">
+                                Zarezervujte si <span class="text-barberText">termín</span> </h3>
+                            <p class="text-sm text-textWhite mb-5 ">Naplánujte si svou návštěvu a dopřejte si
+                                profesionální péči, která vás osvěží a zvýrazní váš styl. </p>
+                            <button
+                                class="w-32 h-10 overflow-hidden mx-auto md:mx-0 bg-barberText uppercase text-background before:ease relative before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-40">
+                                <span relative="relative z-10 ">Rezervace</span>
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- middle -->
+                <div class="hidden md:flex items-center justify-center mx-auto">
+                    <!-- <img src="./img/barber/delfina-pan-8esvJeVUdes-unsplash_11zon.webp" alt="face"
+                        class="object-cover h-24 md:h-56 md:w-56 " /> -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2405.773181692405!2d14.499371176347388!3d50.104078771528116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470beccb05f8476b%3A0x6a2b75c9b93983de!2sTIVO%20s.r.o.%20-%20Domov%20pro%20v%C3%A1%C5%A1%20byznys!5e1!3m2!1ssk!2scz!4v1727906690729!5m2!1ssk!2scz"
+                        width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <!-- right  -->
+                <div
+                    class="flex flex-col  md:items-start items-center text-center md:text-start justify-center mx-auto pt-12 md:pt-0">
+                    <div class="flex flex-row gap-5 mb-5">
+                        <img src="./img/barber/clock-seven-svgrepo-com.svg" alt="hours" class=" text-sm font-semibold">
+
+                        </img>
+
+                        <div class="flex flex-col text-background text-md">
+                            <p class="text-barberText uppercase font-bold text-md mb-3">Otevírací doba</p>
+
+                            <p class="text-sm text-textWhite">Po - Pá : 11:00 - 19:00</p>
+                            <p class="text-sm text-textWhite">So : 10:00 - 17:00 </p>
+
+                        </div>
+                    </div>
+                    <hr
+                        class="h-px w-24 md:w-44 mx-auto items-center justify-center text-center bg-decentGrey border-0 mb-3">
+                    <div class="flex flex-row gap-5 items-center">
+                        <img src="./img/barber/location-pin-svgrepo-com.svg" alt="location">
+                        </img>
+                        <div class="flex flex-col mb-5">
+                            <p class="text-barberText uppercase font-bold text-md mb-3">Adresa</p>
+                            <p class="text-sm text-textWhite">Na Harfě 916/9a,</p>
+                            <p class="text-sm text-textWhite">190 00 Praha 9</p>
+                        </div>
+                    </div>
+                    <hr
+                        class="h-px w-24 md:w-44 mx-auto items-center justify-center text-center bg-decentGrey border-0 mb-3">
+                    <div class="flex flex-row gap-5 items-center ">
+                        <img src="./img/barber/phone-svgrepo-com.svg" alt="phone">
+                        </img>
+                        <div class="flex flex-col text-background text-md mb-5">
+                            <p class="text-barberText uppercase font-bold text-md mb-3">Telefon</p>
+                            <p class="text-sm text-textWhite">+420 773 989 733</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <hr class="my-5 border-decentGrey sm:mx-auto lg:my-8" />
+            <div class="flex items-center mx-auto text-center">
+                <span class="text-xs text-decentGrey text-center mx-auto">
+                    © 2024 CloudyLake. All Rights Reserved.
+
+                </span>
+
+            </div>
+        </div>
+
+    </footer>
+    <!-- footer end -->
 
 </body>
 

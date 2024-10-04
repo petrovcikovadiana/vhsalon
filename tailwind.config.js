@@ -23,6 +23,8 @@ module.exports = {
         massageText: "#A8907B",
         massageCard: "#2C2C2E",
         vlastaNav: "#AA9980",
+        barberText: "#CE9C61",
+        decentGrey: "#606060",
       },
     },
   },

@@ -12,3 +12,9 @@
   transform: rotate(-16deg); /* Otočení o 16 stupňů */
   z-index: -10;
 }
+
+.hero-section {
+  min-height: calc(
+    100vh - 4rem
+  ); /* 4rem je výška navbaru, uprav podle potřeby */
+}
