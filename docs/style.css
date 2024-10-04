@@ -588,10 +588,6 @@ video {
   }
 }
 
-.static {
-  position: static;
-}
-
 .fixed {
   position: fixed;
 }
@@ -1197,14 +1193,6 @@ video {
   padding-top: 2rem;
 }
 
-.pt-16 {
-  padding-top: 4rem;
-}
-
-.pt-10 {
-  padding-top: 2.5rem;
-}
-
 .text-center {
   text-align: center;
 }
@@ -1506,10 +1494,6 @@ video {
   transition-duration: 700ms;
 }
 
-.hover\:underline:hover {
-  text-decoration-line: underline;
-}
-
 .hover\:before\:-translate-x-40:hover::before {
   content: var(--tw-content);
   --tw-translate-x: -10rem;
@@ -1676,10 +1660,6 @@ video {
 
   .md\:pt-0 {
     padding-top: 0px;
-  }
-
-  .md\:pt-16 {
-    padding-top: 4rem;
   }
 
   .md\:text-start {
