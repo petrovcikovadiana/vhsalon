@@ -4,47 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Massage</title>
+    <title>Masážní salon</title>
+    <meta name="description"
+        content="Relaxujte a obnovte své tělo v našem masážním salonu. Nabízíme různé typy masáží, které pomohou zmírnit stres a napětí.">
+    <meta name="keywords" content="masáže, relaxační masáže, sportovní masáže, masážní salon, wellness">
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/feather-icons"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const menuToggle = document.getElementById("menu-toggle");
             const menuItems = document.getElementById("menu-items");
+            const menuIcon = document.getElementById("menu-icon");
+            const menuLinks = menuItems.querySelectorAll("a");
+
 
             menuToggle.addEventListener("click", function () {
                 menuItems.classList.toggle("hidden");
                 menuItems.classList.toggle("show");
 
+                // Toggle icon
+                if (menuItems.classList.contains("show")) {
+                    menuIcon.innerHTML = '<path d="M6 18L18 6M6 6l12 12" />';
+                } else {
+                    menuIcon.innerHTML = '<path d="M4 6h16M4 12h16M4 18h16" />';
+                }
             });
-            feather.replace();
+            menuLinks.forEach(link => {
+                link.addEventListener("click", function () {
+                    menuItems.classList.remove("show");
+                    menuItems.classList.add("hidden");
+                    menuIcon.innerHTML = '<path d="M4 6h16M4 12h16M4 18h16" />'; // Reset to hamburger icon
+                });
+            });
 
+            feather.replace();
         });
+
     </script>
     <style>
-        /* Základní styl menu (je skryté na mobilních zařízeních) */
+        #menu-toggle {
+            position: relative;
+            z-index: 40;
+        }
+
+        /* Basic style menu */
         #menu-items {
             display: none;
             position: fixed;
-            /* Pozice pevně k obrazovce */
             top: 0;
             left: 0;
             width: 100vw;
-            /* Šířka celé obrazovky */
             height: 100vh;
-            /* Výška celé obrazovky */
-            background-color: rgba(0, 0, 0, 0.9);
-            /* Poloprůhledné černé pozadí */
-            z-index: 30;
+            background-color: #212121;
         }
 
-        /* Styl pro zobrazení menu */
+        /* Style to display menu */
         #menu-items.show {
             display: flex;
             flex-direction: column;
-            /* Menu bude vertikální */
-            justify-content: center;
-            align-items: center;
         }
 
         @media (min-width: 768px) {

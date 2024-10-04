@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barbershop Říčany</title>
+    <meta name="description"
+        content="Druhý barbershop v našem portfoliu nabízí skvělé služby v oblasti pánské krásy. U nás najdete styl, pohodlí a profesionální péči.">
+    <meta name="keywords" content="barbershop, pánské holení, pánské účesy, péče o vousy, barber">
     <link rel="stylesheet" href="style.css">
 
     <script src="https://unpkg.com/feather-icons"></script>
@@ -12,12 +15,17 @@
         document.addEventListener("DOMContentLoaded", function () {
             const menuToggle = document.getElementById("menu-toggle");
             const menuItems = document.getElementById("menu-items");
+            const menuIcon = document.getElementById("menu-icon");
 
             menuToggle.addEventListener("click", function () {
                 menuItems.classList.toggle("hidden");
+
+                // Přepínání ikon
+                const isMenuOpen = !menuItems.classList.contains("hidden");
+                menuIcon.querySelector("path:first-child").classList.toggle("hidden", isMenuOpen);
+                menuIcon.querySelector("path:last-child").classList.toggle("hidden", !isMenuOpen);
             });
             feather.replace();
-
         });
     </script>
 
@@ -36,9 +44,11 @@
             <button id="menu-toggle" class="md:hidden focus:outline-none">
                 <svg id="menu-icon" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
-                    <path d="M4 6h16M4 12h16M4 18h16" />
+                    <path d="M4 6h16M4 12h16M4 18h16" class="block" />
+                    <path d="M6 18L18 6M6 6l12 12" class="hidden" />
                 </svg>
             </button>
+
 
         </div>
 
@@ -91,18 +101,15 @@
                     <div class="relative z-20">
                         <!-- socials -->
                         <div class="flex text-[20px] gap-x-3 max-w-max mx-auto lg:mx-0">
-                            <a href="https://github.com/petrovcikovadiana"
+                            <a href="https://www.facebook.com/vlastaberbershop/?locale=cs_CZ"
                                 class="w-6 h-6 flex items-center justify-center">
                                 <img src="./img/barber/fb.svg" alt="facebook" />
                             </a>
-                            <a href="https://www.linkedin.com/in/diana-petrov%C4%8D%C3%ADkov%C3%A1-a6034a1b2/"
+                            <a href="https://www.instagram.com/vlastabarbershop/"
                                 class="w-6 h-6 flex items-center justify-center">
-                                <img src="./img/barber/ig.svg" alt="facebook" />
+                                <img src="./img/barber/ig.svg" alt="instagram" />
                             </a>
-                            <a href="https://www.linkedin.com/in/diana-petrov%C4%8D%C3%ADkov%C3%A1-a6034a1b2/"
-                                class="w-6 h-6 flex items-center justify-center">
-                                <img src="./img/barber/wa.svg" alt="facebook" />
-                            </a>
+
                         </div>
                     </div>
                 </div>
@@ -125,7 +132,7 @@
     <section id="pricing">
         <div className="flex md:flex-row flex-col gap-4 mx-auto md:w-full justify-center bg-massageCard">
 
-            <div class="flex w-96 md:w-[600px] mx-auto my-16 bg-massageCard border-2 border-barberText">
+            <div class="flex w-96 md:w-[600px] mx-auto my-16 bg-massageCard md:border-2 md:border-barberText">
                 <div class="w-full bg-massageCard rounded-2xl m-8 md:m-10">
                     <div class="flex flex-col items-center mx-auto">
                         <img src="./img/barber/logo.svg" alt="face" class="object-fit h-24 md:h-32 md:w-32 " />
@@ -226,7 +233,7 @@
                 <div
                     class="flex flex-col  md:items-start items-center text-center md:text-start justify-center mx-auto pt-12 md:pt-0">
                     <div class="flex flex-row gap-5 mb-5">
-                        <img src="./img/barber/clock-seven-svgrepo-com.svg" alt="hours" class=" text-sm font-semibold">
+                        <img src="./img/barber/clock-seven-svgrepo-com.svg" alt="hours" class="hidden md:block">
 
                         </img>
 
@@ -241,7 +248,7 @@
                     <hr
                         class="h-px w-24 md:w-44 mx-auto items-center justify-center text-center bg-decentGrey border-0 mb-3">
                     <div class="flex flex-row gap-5 items-center">
-                        <img src="./img/barber/location-pin-svgrepo-com.svg" alt="location">
+                        <img src="./img/barber/location-pin-svgrepo-com.svg" alt="location" class="hidden md:block">
                         </img>
                         <div class="flex flex-col mb-5">
                             <p class="text-barberText uppercase font-bold text-md mb-3">Adresa</p>
@@ -252,7 +259,7 @@
                     <hr
                         class="h-px w-24 md:w-44 mx-auto items-center justify-center text-center bg-decentGrey border-0 mb-3">
                     <div class="flex flex-row gap-5 items-center ">
-                        <img src="./img/barber/phone-svgrepo-com.svg" alt="phone">
+                        <img src="./img/barber/phone-svgrepo-com.svg" alt="phone" class="hidden md:block">
                         </img>
                         <div class="flex flex-col text-background text-md mb-5">
                             <p class="text-barberText uppercase font-bold text-md mb-3">Telefon</p>
