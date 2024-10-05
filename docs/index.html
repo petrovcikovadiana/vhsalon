@@ -55,63 +55,11 @@
             </a>
         </div>
     </div>
-    <div class="cookies-eu-banner hidden ">
-        <p> Tato stránka využívá cookies. Kliknutím na tlačítko "Povolit vše" vyjadřujete souhlas s jejich používáním.
-        </p>
-        <div class="flex flex-row gap-5 mx-auto items-center justify-center">
-            <button class="cookies-button accept">Povolit vše</button>
-            <button class="cookies-button decline">Odmítnout vše</button>
-        </div>
+    <!-- cookies -->
+    <div id="cookie-container"></div>
+    <script src="cookies.js"></script>
 
 
-    </div>
-    <script src="script.js"></script>
-    <script>
-        const getCookie = (name) => {
-            const value = " " + document.cookie;
-            console.log("value", `==${value}==`);
-            const parts = value.split(" " + name + "=");
-            return parts.length < 2 ? undefined : parts.pop().split(";").shift();
-        };
-
-
-        const setCookie = function (name, value, expiryDays, domain, path, secure) {
-            const exdate = new Date();
-            exdate.setHours(
-                exdate.getHours() +
-                (typeof expiryDays !== "number" ? 365 : expiryDays) * 24
-            );
-            document.cookie =
-                name +
-                "=" +
-                value +
-                ";expires=" +
-                exdate.toUTCString() +
-                ";path=" +
-                (path || "/") +
-                (domain ? ";domain=" + domain : "") +
-                (secure ? ";secure" : "");
-        };
-
-        const $cookiesBanner = document.querySelector(".cookies-eu-banner");
-        const $acceptButton = $cookiesBanner.querySelector(".accept");
-        const $declineButton = $cookiesBanner.querySelector(".decline");
-        const cookieName = "cookiesBanner";
-        const hasCookie = getCookie(cookieName);
-        if (!hasCookie) {
-            $cookiesBanner.classList.remove("hidden");
-        }
-
-        $acceptButton.addEventListener("click", () => {
-            setCookie(cookieName, "true");
-            $cookiesBanner.remove();
-        });
-
-        $declineButton.addEventListener("click", () => {
-            setCookie(cookieName, "false");
-            $cookiesBanner.remove();
-        });
-    </script>
 </body>
 
 </html>
