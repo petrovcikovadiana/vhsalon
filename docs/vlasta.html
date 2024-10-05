@@ -12,36 +12,85 @@
     <link rel="stylesheet" href="style.css">
 
     <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
+
+    <style>
+        #menu-toggle {
+            position: relative;
+            z-index: 50;
+        }
+
+        /* Basic style menu */
+        #menu-items {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #AA9980;
+        }
+
+        /* Style to display menu */
+        #menu-items.show {
+            display: flex;
+            flex-direction: column;
+            z-index: 40;
+        }
+
+        @media (min-width: 768px) {
+            #menu-items {
+                display: flex;
+                position: fixed;
+                height: 0;
+                background-color: transparent;
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+    </style>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const menuToggle = document.getElementById("menu-toggle");
             const menuItems = document.getElementById("menu-items");
+            const menuIcon = document.getElementById("menu-icon");
+            const menuLinks = menuItems.querySelectorAll("a");
+
 
             menuToggle.addEventListener("click", function () {
                 menuItems.classList.toggle("hidden");
-            });
-            feather.replace();
+                menuItems.classList.toggle("show");
 
+                // Toggle icon
+                if (menuItems.classList.contains("show")) {
+                    menuIcon.innerHTML = '<path d="M6 18L18 6M6 6l12 12" />';
+                } else {
+                    menuIcon.innerHTML = '<path d="M4 6h16M4 12h16M4 18h16" />';
+                }
+            });
+            menuLinks.forEach(link => {
+                link.addEventListener("click", function () {
+                    menuItems.classList.remove("show");
+                    menuItems.classList.add("hidden");
+                    menuIcon.innerHTML = '<path d="M4 6h16M4 12h16M4 18h16" />'; // Reset to hamburger icon
+                });
+            });
+
+            feather.replace();
         });
     </script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
 </head>
 
 <body class="bg-black">
-    <nav id="home" class="flex flex-col bg-vlastaNav font-macondo">
+    <nav id="home" class="flex flex-col fixed w-full z-20 bg-vlastaNav font-macondo">
         <!-- Navbar -->
-        <div class="flex flex-row justify-between items-center h-16 px-4">
+        <div class="flex container mx-auto flex-row justify-between items-center h-16 px-4">
             <!-- Logo -->
-            <div class="flex items-center space-x-4 relative z-20">
+            <div class="flex items-center space-x-4 relative z-50">
                 <img src="./img/vlasta/SmartSelectImage_2018-02-02-00-19-23 (1).webp" alt="logo" class="w-20 h-20">
-
             </div>
-
-
-
             <!-- Contact - hidden on mobile -->
             <div class="hidden md:flex relative z-20">
                 <!-- socials -->
@@ -68,7 +117,7 @@
 
         <!-- Menu Items -->
         <div id="menu-items"
-            class="md:flex md:h-16 items-center w-full justify-start md:justify-center md:absolute z-10 hidden ">
+            class="md:flex md:h-16 items-center w-full justify-start md:justify-center pt-16 md:pt-8 md:absolute z-10 hidden ">
             <ul class="flex flex-col md:flex-row md:space-x-4 items-start pl-5">
                 <li><a href="#home" class="block py-2 px-4 text-black">Domů</a></li>
                 <li><a href="#pricing" class="block py-2 px-4 text-black">Ceník</a></li>

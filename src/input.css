@@ -6,8 +6,8 @@
   content: "";
   position: absolute;
   left: 0;
-  width: 100%; /* Dvojitá šířka pro pokrytí */
-  height: 1px; /* Tloušťka čáry */
+  width: 100%;
+  height: 1px;
   background-color: #d25c33;
   transform: rotate(-16deg); /* Otočení o 16 stupňů */
   z-index: -10;
@@ -17,4 +17,38 @@
   min-height: calc(
     100vh - 4rem
   ); /* 4rem je výška navbaru, uprav podle potřeby */
+}
+
+.cookies-eu-banner {
+  background: #444;
+  color: #fff;
+  padding: 6px;
+  font-size: 13px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.cookies-eu-banner button {
+  text-decoration: none;
+  background: #222;
+  color: #fff;
+  border: 1px solid #000;
+  cursor: pointer;
+  padding: 4px 7px;
+  margin: 2px 0;
+  font-size: 13px;
+  font-weight: 700;
+  transition: background 0.07s, color 0.07s, border-color 0.07s;
+}
+
+.cookies-eu-banner button:hover {
+  background: #fff;
+  color: #222;
+}
+
+.hidden {
+  display: none;
 }

@@ -16,25 +16,78 @@
             const menuToggle = document.getElementById("menu-toggle");
             const menuItems = document.getElementById("menu-items");
             const menuIcon = document.getElementById("menu-icon");
+            const menuLinks = menuItems.querySelectorAll("a");
+
 
             menuToggle.addEventListener("click", function () {
                 menuItems.classList.toggle("hidden");
+                menuItems.classList.toggle("show");
 
-                // Přepínání ikon
-                const isMenuOpen = !menuItems.classList.contains("hidden");
-                menuIcon.querySelector("path:first-child").classList.toggle("hidden", isMenuOpen);
-                menuIcon.querySelector("path:last-child").classList.toggle("hidden", !isMenuOpen);
+                // Toggle icon
+                if (menuItems.classList.contains("show")) {
+                    menuIcon.innerHTML = '<path d="M6 18L18 6M6 6l12 12" />';
+                } else {
+                    menuIcon.innerHTML = '<path d="M4 6h16M4 12h16M4 18h16" />';
+                }
             });
+            menuLinks.forEach(link => {
+                link.addEventListener("click", function () {
+                    menuItems.classList.remove("show");
+                    menuItems.classList.add("hidden");
+                    menuIcon.innerHTML = '<path d="M4 6h16M4 12h16M4 18h16" />'; // Reset to hamburger icon
+                });
+            });
+
             feather.replace();
         });
     </script>
+    <style>
+        #menu-toggle {
+            position: relative;
+            z-index: 40;
+        }
+
+        /* Basic style menu */
+        #menu-items {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #CE9C61;
+        }
+
+        /* Style to display menu */
+        #menu-items.show {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        @media (min-width: 768px) {
+            #menu-items {
+                display: flex;
+                position: fixed;
+                /* Zruší pevnou pozici */
+                height: 0;
+                /* Normální výška */
+                background-color: transparent;
+                /* Žádné pozadí */
+                flex-direction: row;
+                /* Položky v řadě */
+                justify-content: center;
+                /* Vycentrování na desktopu */
+            }
+        }
+    </style>
 
 </head>
 
 <body class="bg-massageCard">
     <nav class="flex flex-col fixed z-20 w-full bg-barberText">
         <!-- Navbar -->
-        <div class="container mx-auto flex flex-row justify-between items-center h-20 px-4 ">
+        <div class="container mx-auto flex flex-row justify-between items-center h-20  px-4">
             <!-- Logo -->
             <div class="flex items-center space-x-4 relative z-20 flex-shrink-0">
                 <img src="./img/barber/Barber-ricany2.svg" alt="logo" class="w-20">
@@ -54,8 +107,8 @@
 
         <!-- Menu Items -->
         <div id="menu-items"
-            class="md:flex md:h-20 items-center w-full justify-start md:justify-center md:absolute z-10 hidden ">
-            <ul class="flex flex-col md:flex-row md:space-x-4 items-start pl-5">
+            class="md:flex md:h-20 items-center w-full justify-start md:justify-center pt-20 md:pt-10 md:absolute z-10 hidden ">
+            <ul class="flex flex-col md:flex-row md:space-x-4 items-center pl-5">
                 <li><a href="#home" class="block py-2 px-4 text-background">Domů</a></li>
                 <li><a href="#pricing" class="block py-2 px-4 text-background">Ceník</a></li>
                 <li><a href="#contact" class="block py-2 px-4 text-background">Kontakt</a></li>
@@ -98,7 +151,7 @@
                         </a>
                     </div>
                     <!-- Contact - -->
-                    <div class="relative z-20">
+                    <div class="relative z-10">
                         <!-- socials -->
                         <div class="flex text-[20px] gap-x-3 max-w-max mx-auto lg:mx-0">
                             <a href="https://www.facebook.com/vlastaberbershop/?locale=cs_CZ"
