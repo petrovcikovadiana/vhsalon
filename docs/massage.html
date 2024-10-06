@@ -105,7 +105,7 @@
         <!-- Menu Items -->
         <div id="menu-items"
             class="md:flex items-center w-full justify-start md:justify-center pt-16 md:pt-8 md:absolute z-10 hidden font-joan">
-            <ul class="flex flex-col md:flex-row md:space-x-4 items-start pl-5">
+            <ul class="flex flex-col md:flex-row md:space-x-4 items-start">
                 <li><a href="#home" class="block py-2 px-4  text-textWhite">Domů</a></li>
                 <li><a href="#services" class="block py-2 px-4  text-textWhite">Služby</a></li>
                 <li><a href="#pricing" class="block py-2 px-4  text-textWhite">Ceník</a></li>
@@ -116,9 +116,9 @@
     <main>
         <!-- hero start -->
         <section class="min-h-[85vh] bg-massageCard lg:min-h-[78vh] flex items-center mb-10 overflow-y-hidden ">
-            <div class="md:container mx-auto flex flex-row md:px-44 md:gap-32">
+            <div class="md:container mx-auto flex flex-row md:px-44">
                 <!-- left container -->
-                <div class="flex flex-col gap-y-8 md:gap-x-12">
+                <div class="flex md:w-1/2 w-full flex-col gap-y-8 md:gap-x-12 md:pt-16">
                     <!-- introduction text -->
                     <div class="flex-1 text-center items-center font-primary lg:text-left">
                         <div class="flex flex-row gap-2 text-center items-center">
@@ -146,7 +146,7 @@
                     </div>
                 </div>
                 <!-- right container -->
-                <div class="hidden lg:flex flex-1 max-w-[320px] lg:max-w-[482px]">
+                <div class="hidden xl:flex w-1/2">
                     <div class="hidden md:flex">
                         <div class="flex flex-row gap-5">
                             <img src="./img/massage/christin-hume-0mof-fe0w0a-unsplash_optimized.webp" alt="hero"
@@ -169,7 +169,7 @@
                 <div class="flex flex-col items-center justify-center mx-auto">
                     <h3 class=" text-xl text-massageText tracking-widest">Naše služby</h3>
                 </div>
-                <div class="flex w-96 md:w-[700px] mx-auto rounded-xl ">
+                <div class="flex w-96 md:w-[800px] mx-auto rounded-xl ">
                     <div class="w-full bg-background rounded-2xl m-8 md:m-10">
                         <hr class="h-px w-80 md:w-[720px] bg-textGrey border-0 mb-2">
 
@@ -338,15 +338,12 @@
                     </div>
                 </div>
                 <hr class="my-5 border-lineGrey sm:mx-auto lg:my-8" />
-                <div class="flex items-center mx-auto text-center">
-                    <span class="text-xs text-gray-500 text-center mx-auto">
+                <div class="flex justify-between mx-auto items-center">
+                    <span class="text-xs text-decentGrey">
                         © 2024 CloudyLake. All Rights Reserved.
-
-
                     </span>
-
+                    <a href="#" class="edit-cookies text-xs text-decentGrey">Upravit nastavení cookies</a>
                 </div>
-            </div>
         </footer>
         <!-- cookies -->
         <div id="cookie-container"></div>
