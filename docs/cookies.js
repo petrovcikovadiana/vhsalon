@@ -97,6 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
         );
         setCookie("marketingCookies", marketingCookies ? "true" : "false", 365);
         setCookie(cookieName, "true", 365);
+        console.log("Uložit nastavení bylo kliknuto");
 
         $editSection.classList.add("hidden");
       });

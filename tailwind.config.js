@@ -32,6 +32,7 @@ module.exports = {
         vlastaNav: "#AA9980",
         barberText: "#CE9C61",
         decentGrey: "#606060",
+        ricanyText: "#dac8ab",
       },
     },
   },

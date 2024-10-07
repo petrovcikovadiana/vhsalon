@@ -14,148 +14,36 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Joan&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const menuToggle = document.getElementById("menu-toggle");
-            const menuItems = document.getElementById("menu-items");
-            const menuIcon = document.getElementById("menu-icon");
-            const menuLinks = menuItems.querySelectorAll("a");
 
-
-            menuToggle.addEventListener("click", function () {
-                menuItems.classList.toggle("hidden");
-                menuItems.classList.toggle("show");
-
-                // Toggle icon
-                if (menuItems.classList.contains("show")) {
-                    menuIcon.innerHTML = '<path d="M6 18L18 6M6 6l12 12" />';
-                } else {
-                    menuIcon.innerHTML = '<path d="M4 6h16M4 12h16M4 18h16" />';
-                }
-            });
-            menuLinks.forEach(link => {
-                link.addEventListener("click", function () {
-                    menuItems.classList.remove("show");
-                    menuItems.classList.add("hidden");
-                    menuIcon.innerHTML = '<path d="M4 6h16M4 12h16M4 18h16" />'; // Reset to hamburger icon
-                });
-            });
-
-            feather.replace();
-        });
-    </script>
-
-    <style>
-        #menu-toggle {
-            position: relative;
-            z-index: 40;
-        }
-
-        /* Basic style menu */
-        #menu-items {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background-color: #ECE2DD;
-        }
-
-        /* Style to display menu */
-        #menu-items.show {
-            display: flex;
-            flex-direction: column;
-        }
-
-        @media (min-width: 768px) {
-            #menu-items {
-                display: flex;
-                position: fixed;
-                /* Zruší pevnou pozici */
-                height: 0;
-                /* Normální výška */
-                background-color: transparent;
-                /* Žádné pozadí */
-                flex-direction: row;
-                /* Položky v řadě */
-                justify-content: center;
-                /* Vycentrování na desktopu */
-            }
-        }
-    </style>
 </head>
 
 <body id="home" class="bg-beautyBg">
-    <nav class="flex flex-col fixed w-full z-30 bg-beautyBg h-20 ">
-        <!-- Navbar -->
-        <div class="container mx-auto flex flex-row justify-between items-center h-16 px-10">
-            <!-- Logo -->
-            <div class="flex items-center space-x-4 relative z-20">
-                <img src="./img/beauty/hallin2.svg" alt="logo" class=" mt-12">
-            </div>
 
-            <!-- Contact - hidden on mobile -->
-            <div class="hidden md:flex relative z-20">
-                <!-- socials -->
-                <div class="flex text-[20px] gap-x-3 max-w-max mx-auto lg:mx-0">
-                    <a href="https://www.facebook.com/beautybyhalin?locale=cs_CZ"
-                        class="w-6 h-6 flex items-center justify-center">
-                        <img src="./img/beauty/fb.svg" alt="facebook" />
-                    </a>
-                    <a href="https://www.instagram.com/beautybyhalin/" class="w-6 h-6 flex items-center justify-center">
-                        <img src="./img/beauty/ig.svg" alt="ig" />
-                    </a>
-                    <a href="https://wa.me/776189256" class="w-6 h-6 flex items-center justify-center">
-                        <img src="./img/beauty/wa.svg" alt="wa" />
-                    </a>
-                </div>
-            </div>
-
-            <!-- Hamburger Menu Button -->
-            <button id="menu-toggle" class="md:hidden focus:outline-none">
-                <svg id="menu-icon" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
-        </div>
-
-        <!-- Menu Items -->
-        <div id="menu-items"
-            class="md:flex md:h-16 items-center w-full justify-start pt-16 md:pt-8 md:justify-center md:absolute z-10 hidden font-joan">
-            <ul class="flex flex-col md:flex-row md:space-x-4 items-center">
-                <li><a href="#home" class="block py-2 px-4 text-black">Domů</a></li>
-                <li><a href="#pricing" class="block py-2 px-4 text-black">Ceník</a></li>
-                <li><a href="#contact" class="block py-2 px-4 text-black">Kontakt</a></li>
-            </ul>
-        </div>
-    </nav>
     <!-- Hero Start -->
     <div class="bg-beautyBg font-joan">
         <div class="relative  px-10 pt-14 lg:px-8">
-            <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-16">
+            <div class="mx-auto max-w-2xl py-16 sm:py-48 lg:py-16">
                 <div class="text-center">
-                    <h1 class="text-2xl md:text-3xl tracking-wider text-gray-900 sm:text-5xl">
+                    <h1 class="text-3xl md:text-5xl tracking-wider text-gray-900">
                         Váš kompletní beauty servis
                         na jednom místě </h1>
-                    <p class="mt-6 text-lg tracking-normal text-gray-600">
+                    <p class="mt-6 text-xl tracking-normal text-gray-600">
                         Náš beauty salon nabízí profesionální služby v oblasti manikúry, pedikúry a permanentního
-                        make-upu. Přijďte si k nám odpočinout a nechte se hýčkat v příjemném prostředí, kde se postaráme
-                        o vaši krásu od hlavy až k patě.
+                        make-upu.
                     </p>
                     <div class="mt-10 flex items-center justify-center gap-x-6">
+                        <button
+                            class="w-44 h-12 overflow-hidden uppercase bg-beautyText rounded-xl text-textWhite before:ease relative before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-40">
+                            Rezervace <span aria-hidden="true" class="ml-2">→</span>
+                        </button>
 
-                        <a href="#" class="text-sm leading-6 text-beautyText uppercase">
-                            Rezervace <span aria-hidden="true">→</span>
-                        </a>
                     </div>
                 </div>
             </div>
 
         </div>
         <!-- hr -->
-        <div class="hidden lg:flex relative h-[60vh] bg-beautyBg mx-auto items-center justify-center">
+        <div class="hidden lg:flex relative h-[50vh] bg-beautyBg mx-auto items-center justify-center">
 
             <!-- images -->
             <div class="absolute hidden lg:flex items-center justify-center md:px-44 gap-5 z-20 mx-auto">
@@ -170,11 +58,11 @@
                 </div>
                 <div class="w-1/4">
                     <img src="./img/beauty/hayley-kim-studios-sRSRuxkOuzI-unsplash (1) (1).jpg" alt="Photo 3"
-                        class="w-80 h-auto object-cover">
+                        class="w-64 h-auto object-cover">
                 </div>
                 <div class="w-1/4">
                     <img src="./img/beauty/188991148_503813964192239_5503023877210150484_n.webp" alt="Photo 4"
-                        class="w-96 h-auto object-cover">
+                        class="w-64 h-auto object-cover">
                 </div>
             </div>
         </div>
@@ -187,164 +75,164 @@
         <div className="flex md:flex-row flex-col gap-4 mx-auto md:w-full justify-center">
             <!-- title -->
             <div class="flex flex-col items-center justify-center mx-auto">
-                <h3 class="mb-5 text-xl text-beautyText tracking-widest font-bold uppercase">Ceník</h3>
+                <h3 class="mb-5 text-2xl text-beautyText tracking-widest font-bold uppercase">Ceník</h3>
             </div>
             <div class="flex w-96 md:w-[600px] mx-auto rounded-xl border-2 border-beautyText">
                 <div class="w-full bg-beautyBg rounded-2xl m-8 md:m-8">
                     <!-- logo -->
                     <div class="flex flex-col items-center mx-auto">
-                        <img src="./img/beauty/hallin2.svg" alt="face" class="object-fit" />
+                        <img src="./img/beauty/hallin2.svg" alt="logo" class="object-fit" />
                     </div>
-                    <h2 class="font-serif text-xl font-medium mb-3 ">
+                    <h2 class="font-serif text-2xl font-medium mb-3 ">
                         Péče o ruce </h2>
                     <div class="flex flex-row justify-between mb-2">
                         <div class="flex flex-col ">
-                            <p class="max-w-xs text-xs leading-5 tracking-wide  text-black ">
+                            <p class="max-w-xs text-md leading-5 tracking-wide  text-black ">
                                 Manikúra
                             </p>
                         </div>
                         <div class="flex flex-col justify-center">
-                            <p class="text-sm text-beautyText justify-center">
+                            <p class="text-lg text-beautyText justify-center">
                                 450 Kč
                             </p>
                         </div>
                     </div>
                     <div class="flex flex-row justify-between mb-2">
                         <div class="flex flex-col ">
-                            <p class="max-w-xs text-xs leading-5 tracking-wide  text-black ">
+                            <p class="max-w-xs text-md leading-5 tracking-wide  text-black ">
                                 Manikúra + gel lak
                             </p>
                         </div>
                         <div class="flex flex-col justify-center">
-                            <p class="text-sm text-beautyText justify-center">
+                            <p class="text-lg text-beautyText justify-center">
                                 650 Kč
                             </p>
                         </div>
                     </div>
                     <div class="flex flex-row justify-between mb-2">
                         <div class="flex flex-col ">
-                            <p class="max-w-xs text-xs leading-5 tracking-wide  text-black ">
+                            <p class="max-w-xs text-md leading-5 tracking-wide  text-black ">
                                 Francie/ombré </p>
                         </div>
                         <div class="flex flex-col justify-center">
-                            <p class="text-sm text-beautyText justify-center">
+                            <p class="text-lg text-beautyText justify-center">
                                 od 100 Kč
                             </p>
                         </div>
                     </div>
                     <div class="flex flex-row justify-between mb-2">
                         <div class="flex flex-col ">
-                            <p class="max-w-xs text-xs leading-5 tracking-wide  text-black ">
+                            <p class="max-w-xs text-md leading-5 tracking-wide  text-black ">
                                 Zdobení </p>
                         </div>
                         <div class="flex flex-col justify-center">
-                            <p class="text-sm text-beautyText justify-center">
+                            <p class="text-lg text-beautyText justify-center">
                                 od 30 Kč
                             </p>
                         </div>
                     </div>
-                    <h2 class="font-serif text-xl font-medium mt-5  mb-3">
+                    <h2 class="font-serif text-2xl font-medium mt-5  mb-3">
                         Péče o nohy </h2>
                     <div class="flex flex-row justify-between mb-2">
                         <div class="flex flex-col ">
-                            <p class="max-w-xs text-xs leading-5 tracking-wide ">
+                            <p class="max-w-xs text-md leading-5 tracking-wide ">
                                 Pedikúra </p>
                         </div>
                         <div class="flex flex-col justify-center">
-                            <p class="text-sm text-beautyText justify-center">
+                            <p class="text-lg text-beautyText justify-center">
                                 590 Kč
                             </p>
                         </div>
                     </div>
                     <div class="flex flex-row justify-between mb-2">
                         <div class="flex flex-col ">
-                            <p class="max-w-xs text-xs leading-5 tracking-wide ">
+                            <p class="max-w-xs text-md leading-5 tracking-wide ">
                                 Pedikúra + gel lak </p>
                         </div>
                         <div class="flex flex-col justify-center">
-                            <p class="text-sm text-beautyText justify-center">
+                            <p class="text-lg text-beautyText justify-center">
                                 790 Kč
                             </p>
                         </div>
                     </div>
                     <div class="flex flex-row justify-between mb-2">
                         <div class="flex flex-col ">
-                            <p class="max-w-xs text-xs leading-5 tracking-wide ">
+                            <p class="max-w-xs text-md leading-5 tracking-wide ">
                                 Ošetření prstou u nohou</p>
                         </div>
                         <div class="flex flex-col justify-center">
-                            <p class="text-sm text-beautyText justify-center">
+                            <p class="text-lg text-beautyText justify-center">
                                 300 Kč
                             </p>
                         </div>
                     </div>
                     <div class="flex flex-row justify-between mb-2">
                         <div class="flex flex-col ">
-                            <p class="max-w-xs text-xs leading-5 tracking-wide ">
+                            <p class="max-w-xs text-md leading-5 tracking-wide ">
                                 Ošetření prstou u nohou + gel lak</p>
                         </div>
                         <div class="flex flex-col justify-center">
-                            <p class="text-sm text-beautyText justify-center">
+                            <p class="text-lg text-beautyText justify-center">
                                 450 Kč
                             </p>
                         </div>
                     </div>
-                    <h2 class="font-serif text-xl font-medium mt-5 mb-3">
+                    <h2 class="font-serif text-2xl font-medium mt-5 mb-3">
                         Obočí </h2>
                     <div class="flex flex-row justify-between mb-2">
                         <div class="flex flex-col ">
-                            <p class="max-w-xs text-xs leading-5 tracking-wide ">
+                            <p class="max-w-xs text-md leading-5 tracking-wide ">
                                 Úprava obočí voskem </p>
                         </div>
                         <div class="flex flex-col justify-center">
-                            <p class="text-sm text-beautyText justify-center">
+                            <p class="text-lg text-beautyText justify-center">
                                 290 Kč
                             </p>
                         </div>
                     </div>
                     <div class="flex flex-row justify-between mb-2">
                         <div class="flex flex-col ">
-                            <p class="max-w-xs text-xs leading-5 tracking-wide ">
+                            <p class="max-w-xs text-md leading-5 tracking-wide ">
                                 Úprava obočí + barvení </p>
                         </div>
                         <div class="flex flex-col justify-center">
-                            <p class="text-sm text-beautyText justify-center">
+                            <p class="text-lg text-beautyText justify-center">
                                 490 Kč
                             </p>
                         </div>
                     </div>
                     <div class="flex flex-row justify-between mb-2">
                         <div class="flex flex-col ">
-                            <p class="max-w-xs text-xs leading-5 tracking-wide ">
+                            <p class="max-w-xs text-md leading-5 tracking-wide ">
                                 Laminace obočí + úprava + barvení </p>
                         </div>
                         <div class="flex flex-col justify-center">
-                            <p class="text-sm text-beautyText justify-center">
+                            <p class="text-lg text-beautyText justify-center">
                                 790 Kč
                             </p>
                         </div>
                     </div>
                     <!-- <hr class="h-px w-80 md:w-[520px] bg-textGrey border-0 mb-2"> -->
-                    <h2 class="font-serif text-xl font-medium mt-5 mb-3">
+                    <h2 class="font-serif text-2xl font-medium mt-5 mb-3">
                         Řasy </h2>
                     <div class="flex flex-row justify-between mb-2">
                         <div class="flex flex-col ">
-                            <p class="max-w-xs text-xs leading-5 tracking-wide ">
+                            <p class="max-w-xs text-md leading-5 tracking-wide ">
                                 Barvení </p>
                         </div>
                         <div class="flex flex-col justify-center">
-                            <p class="text-sm text-beautyText justify-center">
+                            <p class="text-lg text-beautyText justify-center">
                                 300 Kč
                             </p>
                         </div>
                     </div>
                     <div class="flex flex-row justify-between mb-2">
                         <div class="flex flex-col ">
-                            <p class="max-w-xs text-xs leading-5 tracking-wide ">
+                            <p class="max-w-xs text-md leading-5 tracking-wide ">
                                 Lash lifting + barvení </p>
                         </div>
                         <div class="flex flex-col justify-center">
-                            <p class="text-sm text-beautyText justify-center">
+                            <p class="text-lg text-beautyText justify-center">
                                 890 Kč
                             </p>
                         </div>
@@ -354,33 +242,33 @@
                         Depilace </h2>
                     <div class="flex flex-row justify-between mb-2">
                         <div class="flex flex-col ">
-                            <p class="max-w-xs text-xs leading-5 tracking-wide ">
+                            <p class="max-w-xs text-md leading-5 tracking-wide ">
                                 Horní ret </p>
                         </div>
                         <div class="flex flex-col justify-center">
-                            <p class="text-sm text-beautyText justify-center">
+                            <p class="text-lg text-beautyText justify-center">
                                 100 Kč
                             </p>
                         </div>
                     </div>
                     <div class="flex flex-row justify-between mb-2">
                         <div class="flex flex-col ">
-                            <p class="max-w-xs text-xs leading-5 tracking-wide ">
+                            <p class="max-w-xs text-md leading-5 tracking-wide ">
                                 Brada </p>
                         </div>
                         <div class="flex flex-col justify-center">
-                            <p class="text-sm text-beautyText justify-center">
+                            <p class="text-lg text-beautyText justify-center">
                                 100 Kč
                             </p>
                         </div>
                     </div>
                     <div class="flex flex-row justify-between mb-2">
                         <div class="flex flex-col ">
-                            <p class="max-w-xs text-xs leading-5 tracking-wide ">
+                            <p class="max-w-xs text-md leading-5 tracking-wide ">
                                 Podpaží </p>
                         </div>
                         <div class="flex flex-col justify-center">
-                            <p class="text-sm text-beautyText justify-center">
+                            <p class="text-lg text-beautyText justify-center">
                                 200 Kč
                             </p>
                         </div>
@@ -390,44 +278,44 @@
 
                     <div class="flex flex-row justify-between mb-2">
                         <div class="flex flex-col ">
-                            <p class="max-w-xs text-xs leading-5 tracking-wide ">Obočí technikou ombré
+                            <p class="max-w-xs text-md leading-5 tracking-wide ">Obočí technikou ombré
                             </p>
                         </div>
                         <div class="flex flex-col justify-center">
-                            <p class="text-sm text-beautyText justify-center">
+                            <p class="text-lg text-beautyText justify-center">
                                 3990 Kč
                             </p>
                         </div>
                     </div>
                     <div class="flex flex-row justify-between mb-2">
                         <div class="flex flex-col ">
-                            <p class="max-w-xs text-xs leading-5 tracking-wide ">
+                            <p class="max-w-xs text-md leading-5 tracking-wide ">
                                 Korekce do 2 měsíců </p>
                         </div>
                         <div class="flex flex-col justify-center">
-                            <p class="text-sm text-beautyText justify-center">
+                            <p class="text-lg text-beautyText justify-center">
                                 500 Kč
                             </p>
                         </div>
                     </div>
                     <div class="flex flex-row justify-between mb-2">
                         <div class="flex flex-col ">
-                            <p class="max-w-xs text-xs leading-5 tracking-wide ">
+                            <p class="max-w-xs text-md leading-5 tracking-wide ">
                                 Aquarelové rty </p>
                         </div>
                         <div class="flex flex-col justify-center">
-                            <p class="text-sm text-beautyText justify-center">
+                            <p class="text-lg text-beautyText justify-center">
                                 4490 Kč
                             </p>
                         </div>
                     </div>
                     <div class="flex flex-row justify-between mb-2">
                         <div class="flex flex-col ">
-                            <p class="max-w-xs text-xs leading-5 tracking-wide ">
+                            <p class="max-w-xs text-md leading-5 tracking-wide ">
                                 Korekce do 2 měsíců </p>
                         </div>
                         <div class="flex flex-col justify-center">
-                            <p class="text-sm text-beautyText justify-center">
+                            <p class="text-lg text-beautyText justify-center">
                                 1000 Kč
                             </p>
                         </div>
@@ -449,7 +337,7 @@
                     <div class="flex flex-row gap-5 items-center">
                         <img src="./img/beauty/clock-seven-svgrepo-com.svg" alt="hours">
                         </img>
-                        <div class="flex flex-col text-sm">
+                        <div class="flex flex-col text-md">
                             <p>Po - Pá : 9:30 - 19:30</p>
                         </div>
 
@@ -460,7 +348,7 @@
                         <img src="./img/beauty/location-pin-svgrepo-com.svg" alt="location">
 
                         </img>
-                        <div class="flex flex-col text-sm">
+                        <div class="flex flex-col text-md">
                             <p>Na Harfě 916/9a,</p>
                             <p>190 00 Praha 9</p>
                         </div>
@@ -473,14 +361,15 @@
                         <div class="flex flex-row gap-5 ">
                             <img src="./img/beauty/phone-svgrepo-com.svg" alt="phone">
                             </img>
-                            <div class="flex flex-col text-sm">
+                            <div class="flex flex-col text-md">
                                 <p>+420 776 189 256</p>
                             </div>
                         </div>
                     </div>
-
+                    <div class="hidden md:block h-10 min-h-[1em] w-0.5 self-stretch bg-beautyText">
+                    </div>
                     <!-- Contact - hidden on mobile -->
-                    <div class="md:hidden flex">
+                    <div class=" flex">
                         <!-- socials -->
                         <div class="flex text-[20px] gap-x-3 max-w-max mx-auto lg:mx-0">
                             <a href="https://www.facebook.com/beautybyhalin?locale=cs_CZ"
@@ -496,14 +385,17 @@
                             </a>
                         </div>
                     </div>
+
                 </div>
             </div>
             <hr class="my-5 border-copyright sm:mx-auto lg:my-8" />
-            <div class="flex justify-between mx-auto items-center">
+            <div class="flex flex-col gap-5 justify-center mx-auto items-center px-2 pb-4">
+                <a href="#" class="edit-cookies text-xs text-decentGrey">Upravit nastavení cookies</a>
+
                 <span class="text-xs text-decentGrey">
                     © 2024 CloudyLake. All Rights Reserved.
                 </span>
-                <a href="#" class="edit-cookies text-xs text-decentGrey">Upravit nastavení cookies</a>
+
             </div>
         </div>
     </footer>

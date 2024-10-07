@@ -83,7 +83,7 @@
     </script>
 </head>
 
-<body class="bg-black" id="home">
+<body class="bg-massageBg" id="home">
     <nav class="flex flex-col fixed w-full z-20 bg-vlastaNav font-macondo">
         <!-- Navbar -->
         <div class="flex container mx-auto flex-row justify-between items-center h-16 px-4">
@@ -118,33 +118,42 @@
         <!-- Menu Items -->
         <div id="menu-items"
             class="md:flex md:h-16 items-center w-full justify-start md:justify-center pt-16 md:pt-8 md:absolute z-10 hidden ">
+
             <ul class="flex flex-col md:flex-row md:space-x-4 items-center">
-                <li><a href="#home" class="block py-2 px-4 text-black">Domů</a></li>
-                <li><a href="#pricing" class="block py-2 px-4 text-black">Ceník</a></li>
-                <li><a href="#gallery" class="block py-2 px-4 text-black">Galerie</a></li>
-                <li><a href="#contact" class="block py-2 px-4 text-black">Kontakt</a></li>
+                <li><a href="#home"
+                        class="block w-full px-10 py-2 text-black rounded-full hover:text-white  hover:bg-[#333333]">Domů</a>
+                </li>
+                <li><a href="#pricing"
+                        class="block w-full px-10 py-2 text-black rounded-full hover:text-white  hover:bg-[#333333]">Ceník</a>
+                </li>
+                <li><a href="#gallery"
+                        class="block w-full px-10 py-2 text-black rounded-full hover:text-white  hover:bg-[#333333]">Galerie</a>
+                </li>
+                <li><a href="#contact"
+                        class="block w-full px-10 py-2 text-black rounded-full hover:text-white  hover:bg-[#333333]">Kontakt</a>
+                </li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Start -->
-    <div class="relative min-h-screen font-macondo">
+    <div class="relative min-h-[70vh] font-macondo">
         <!-- Background image with opacity -->
         <div class="absolute inset-0 bg-[url('./img/vlasta/apothekary.webp')] bg-cover bg-center opacity-30">
         </div>
 
         <!-- Text content -->
-        <div class="relative z-10 flex items-center justify-center min-h-screen ">
+        <div class="relative z-10 flex items-center justify-center min-h-[70vh] ">
             <div class="text-center px-10">
-                <h1 class="text-5xl font-bold text-vlastaNav max-w-lg ">Váš styl, naše řemeslo -
+                <h1 class="text-4xl md:text-6xl font-bold text-vlastaNav max-w-xl ">Váš styl, naše řemeslo -
                     <span>precizní barber služby</span>
                 </h1>
-                <p class="text-lg text-white my-4">Náš barbershop nabízí profesionální pánské střihy, holení a péči o
+                <p class="text-xl text-white my-4">Náš barbershop nabízí profesionální pánské střihy, holení a péči o
                     vousy.</p>
                 <!-- Reservation button -->
                 <button
-                    class="w-36 h-10 overflow-hidden uppercase bg-vlastaNav rounded-xl text-background before:ease relative before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-40">
-                    Rezervace
+                    class="flex items-center justify-center mx-auto w-36 h-10 overflow-hidden uppercase bg-vlastaNav rounded-xl text-background before:ease relative before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-40">
+                    <p class="text-xl">Rezervace</p>
                 </button>
 
             </div>
@@ -153,19 +162,21 @@
     <!-- hero end -->
     <!-- pricing start -->
     <section id="pricing">
-        <div class="flex flex-row h-screen bg-massageBg font-macondo">
-            <div class="w-1/3 hidden md:flex">
-                <img src="./img/vlasta/jonathan-weiss-1wT1EcGXKBk-unsplash_2_11zon.webp" class="h-screen">
+        <div
+            class="flex flex-row items-center mx-auto max-w-[1220px] justify-center h-[70vh] bg-massageBg font-macondo">
+            <div class="w-1/2 hidden md:flex">
+                <img src="./img/vlasta/jonathan-weiss-1wT1EcGXKBk-unsplash_2_11zon.webp" class="h-[70vh]">
             </div>
             <!-- right container -->
-            <div class="w-2/3 mx-auto">
+            <div class="md:w-1/2 w-full mx-auto">
                 <div className="flex md:flex-row flex-col gap-4 items-center mx-auto w-full justify-center">
-                    <div class="flex md:w-[600px] mx-auto my-16 ">
-                        <div class="w-full bg-background md:m-10">
+                    <div class="flex md:w-[600px] mx-auto  ">
+                        <div class="w-full bg-background pt-10 px-10">
                             <!-- title -->
-                            <h3 class="uppercase text-2xl text-vlastaNav tracking-widest font-bold mb-10">Ceník</h3>
+                            <h3 class="uppercase text-2xl text-vlastaNav tracking-widest text-center font-bold ">Ceník
+                            </h3>
 
-                            <div class="flex flex-row justify-between my-5 ">
+                            <div class="flex flex-row justify-between my-4 ">
                                 <div class="flex flex-col ">
                                     <h2 class="text-xl font-medium text-textWhite uppercase">
                                         Střih </h2>
@@ -177,7 +188,7 @@
                                 </div>
                             </div>
                             <hr class="h-px w-full md:w-[520px] sm:max-w-[520px] mx-auto bg-textGrey border-0 mb-2">
-                            <div class="flex flex-row justify-between my-5">
+                            <div class="flex flex-row justify-between my-4">
                                 <div class="flex flex-col ">
                                     <h2 class="text-xl font-medium text-textWhite uppercase">
                                         Střih & vousy </h2>
@@ -190,7 +201,7 @@
                             </div>
                             <hr class="h-px w-full md:w-[520px] sm:max-w-[520px] mx-auto bg-textGrey border-0 mb-2">
 
-                            <div class="flex flex-row justify-between my-5">
+                            <div class="flex flex-row justify-between my-4">
                                 <div class="flex flex-col ">
                                     <h2 class="text-xl font-medium text-textWhite uppercase">
                                         Vousy </h2>
@@ -203,7 +214,7 @@
                             </div>
                             <hr class="h-px w-full md:w-[520px] sm:max-w-[520px] mx-auto bg-textGrey border-0 mb-2">
 
-                            <div class="flex flex-row justify-between my-5">
+                            <div class="flex flex-row justify-between my-4">
                                 <div class="flex flex-col ">
                                     <h2 class="text-xl font-medium text-textWhite uppercase">
                                         Manikúra </h2>
@@ -216,7 +227,7 @@
                             </div>
                             <hr class="h-px w-full md:w-[520px] sm:max-w-[520px] mx-auto bg-textGrey border-0 mb-2">
 
-                            <div class="flex flex-row justify-between my-5">
+                            <div class="flex flex-row justify-between my-4">
                                 <div class="flex flex-col ">
                                     <h2 class="text-xl font-medium text-textWhite uppercase">
                                         Pedikúra </h2>
@@ -228,7 +239,7 @@
                                 </div>
                             </div>
                             <hr class="h-px w-full md:w-[520px] sm:max-w-[520px] mx-auto bg-textGrey border-0 mb-2">
-                            <div class="flex flex-row justify-between my-5">
+                            <div class="flex flex-row justify-between my-4">
                                 <div class="flex flex-col ">
                                     <h2 class="text-xl font-medium text-textWhite uppercase">
                                         Mani & Pedi </h2>
@@ -240,7 +251,7 @@
                                 </div>
                             </div>
                             <hr class="h-px w-full md:w-[520px] sm:max-w-[520px] mx-auto bg-textGrey border-0 mb-2">
-                            <div class="flex flex-row justify-between my-5">
+                            <div class="flex flex-row justify-between my-4">
                                 <div class="flex flex-col ">
                                     <h2 class="text-xl font-medium text-textWhite uppercase">
                                         Úprava obočí </h2>
@@ -251,9 +262,6 @@
                                     </p>
                                 </div>
                             </div>
-                            <hr class="h-px w-full md:w-[520px] sm:max-w-[520px] mx-auto bg-textGrey border-0 mb-2">
-
-
                         </div>
                     </div>
                 </div>
@@ -263,14 +271,13 @@
     <!-- pricing end -->
     <!-- gallery section -->
     <section id="gallery">
-        <div class="flex items-center justify-center bg-massageBg font-macondo">
+        <div class="flex items-center justify-center bg-vlastaNav font-macondo">
 
-            <div class="bg-massageBg p-6 m-3 space-y-6 md:p-24">
+            <div class="bg-vlastaNav p-6 m-3 space-y-6 md:p-10">
                 <!-- title -->
                 <div class="flex flex-col items-center justify-center mx-auto">
-                    <h3 class="uppercase text-2xl text-vlastaNav tracking-widest font-bold">Galerie</h3>
+                    <h3 class="uppercase text-2xl text-background tracking-widest font-bold">Galerie</h3>
                 </div>
-                <div class="flex flex-col justify-between space-y-5 md:flex-row md:space-y-0"></div>
 
                 <div class="grid gap-5 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                     <div class="relative group">
@@ -314,7 +321,7 @@
                     <div class="flex flex-row gap-5 items-center">
                         <img src="./img/vlasta/clock-seven-svgrepo-com.svg" alt="hours">
                         </img>
-                        <div class="flex flex-col text-background text-sm">
+                        <div class="flex flex-col text-background text-md">
                             <p>Po - Pá : 11:00 - 18:00</p>
 
                         </div>
@@ -326,7 +333,7 @@
                         <img src="./img/vlasta/location-pin-svgrepo-com.svg" alt="location">
 
                         </img>
-                        <div class="flex flex-col text-background text-sm">
+                        <div class="flex flex-col text-background text-md">
                             <p>Na Harfě 916/9A,</p>
                             <p>190 00 Praha 9</p>
                         </div>
@@ -341,7 +348,7 @@
 
                             </img>
 
-                            <div class="flex flex-col text-background text-sm">
+                            <div class="flex flex-col text-background text-md">
                                 <p>+420 773 989 733</p>
                             </div>
 
@@ -355,7 +362,7 @@
 
                         </img>
 
-                        <div class="flex flex-col text-background text-sm">
+                        <div class="flex flex-col text-background text-md">
                             <p>vh7777@seznam.cz</p>
                         </div>
 
@@ -375,11 +382,13 @@
                 </div>
             </div>
             <hr class="my-5 border-lightBlack sm:mx-auto lg:my-8" />
-            <div class="flex justify-between mx-auto items-center">
-                <span class="text-xs text-decentGrey">
+            <div class="flex flex-col gap-5 justify-center mx-auto items-center px-2 pb-4">
+                <a href="#" class="edit-cookies text-xs text-lightBlack">Upravit nastavení cookies</a>
+
+                <span class="text-xs text-lightBlack">
                     © 2024 CloudyLake. All Rights Reserved.
                 </span>
-                <a href="#" class="edit-cookies text-xs text-decentGrey">Upravit nastavení cookies</a>
+
             </div>
     </footer>
     <!-- cookies -->

@@ -83,42 +83,38 @@
 </head>
 
 <body id="home" class="bg-massageBg font-joan">
-    <nav class="flex flex-col bg-massageBg fixed w-full z-20">
-        <!-- Navbar -->
-        <div class="flex flex-row justify-between items-center h-16 px-10 text-textWhite">
-            <!-- Logo -->
-            <div class="flex items-center space-x-4 relative z-20">
-
-            </div>
-
-            <!-- Hamburger Menu Button -->
-            <button id="menu-toggle" class="md:hidden focus:outline-none">
-                <svg id="menu-icon" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
-
+    <!-- <nav class="flex flex-col bg-massageBg fixed w-full z-20">
+    <div class="flex flex-row justify-between items-center h-16 px-10 text-textWhite">
+        <div class="flex items-center space-x-4 relative z-20">
 
         </div>
 
-        <!-- Menu Items -->
-        <div id="menu-items"
-            class="md:flex items-center w-full justify-start md:justify-center pt-16 md:pt-8 md:absolute z-10 hidden font-joan">
-            <ul class="flex flex-col md:flex-row md:space-x-4 items-center">
-                <li><a href="#home" class="block py-2 px-4  text-textWhite">Domů</a></li>
-                <li><a href="#services" class="block py-2 px-4  text-textWhite">Služby</a></li>
-                <li><a href="#pricing" class="block py-2 px-4  text-textWhite">Ceník</a></li>
-                <li><a href="#contact" class="block py-2 px-4  text-textWhite">Kontakt</a></li>
-            </ul>
-        </div>
-    </nav>
+        <button id="menu-toggle" class="md:hidden focus:outline-none">
+            <svg id="menu-icon" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+
+
+    </div>
+
+    <div id="menu-items"
+        class="md:flex items-center w-full justify-start md:justify-center pt-16 md:pt-8 md:absolute z-10 hidden font-joan">
+        <ul class="flex flex-col md:flex-row md:space-x-4 items-center">
+            <li><a href="#home" class="block py-2 px-4  text-textWhite">Domů</a></li>
+            <li><a href="#services" class="block py-2 px-4  text-textWhite">Služby</a></li>
+            <li><a href="#pricing" class="block py-2 px-4  text-textWhite">Ceník</a></li>
+            <li><a href="#contact" class="block py-2 px-4  text-textWhite">Kontakt</a></li>
+        </ul>
+    </div>
+    </nav> -->
     <main>
         <!-- hero start -->
-        <section class="min-h-[85vh] bg-massageCard lg:min-h-[78vh] flex items-center mb-10 overflow-y-hidden ">
+        <section class="min-h-[60vh] bg-massageCard lg:min-h-[60vh] flex items-center mb-10 overflow-y-hidden ">
             <div class="md:container mx-auto flex flex-row md:px-44">
                 <!-- left container -->
-                <div class="flex md:w-1/2 w-full flex-col gap-y-8 md:gap-x-12 md:pt-16">
+                <div class="flex md:w-1/2 w-full flex-col md:gap-x-12 md:pt-28">
                     <!-- introduction text -->
                     <div class="flex-1 text-center items-center font-primary lg:text-left">
                         <div class="flex flex-row gap-2 text-center items-center">
@@ -146,15 +142,15 @@
                     </div>
                 </div>
                 <!-- right container -->
-                <div class="hidden xl:flex w-1/2">
-                    <div class="hidden md:flex">
-                        <div class="flex flex-row gap-5">
+                <div class="hidden xl:flex w-1/2 md:pt-8">
+                    <div class="hidden md:flex ">
+                        <div class="flex flex-row gap-5 items-center justify-center">
                             <img src="./img/massage/christin-hume-0mof-fe0w0a-unsplash_optimized.webp" alt="hero"
-                                class="w-1/3 h-80 object-cover mt-1 rounded-full">
+                                class="w-1/3 h-72 mt-20 object-cover rounded-full">
                             <img src="./img/massage/massage-therapy-1584711_1280_optimized.webp" alt="hero"
-                                class="w-1/3 h-80 mt-1 rounded-full object-cover"> <img
+                                class="w-1/3 h-72 mt-10 rounded-full object-cover"> <img
                                 src="./img/massage/s-o-c-i-a-l-c-u-t-jx8kqpp-tyk-unsplash_optimized.webp" alt="hero"
-                                class="w-1/3 h-80 mt-1 rounded-full object-cover">
+                                class="w-1/3 h-72 rounded-full object-cover">
                         </div>
                     </div>
                 </div>
@@ -162,96 +158,81 @@
         </section>
         <!-- hero end -->
 
-        <!-- services section -->
+        <!-- services start -->
         <section id="services">
-            <div className="flex md:flex-row flex-col gap-4 mx-auto md:w-full justify-center font-joan">
-                <!-- title -->
-                <div class="flex flex-col items-center justify-center mx-auto">
-                    <h3 class=" text-xl text-massageText tracking-widest">Naše služby</h3>
+            <div class="flex flex-col max-w-[1200px] mx-auto bg-massageBg lg:flex-row ">
+                <!-- left side  -->
+                <div class="lg:w-1/2  flex flex-col justify-center bg-massageBg p-8 max-w-lg">
+                    <h1 class="text-4xl font-bold mb-4 text-massageText text-center md:text-start">Oblíbené masáže</h1>
+                    <p class="text-lg text-textWhite tracking-normal leading-8 text-center md:text-start">V našem
+                        masážním salonu se
+                        zaměřujeme na
+                        péči o
+                        tělo i mysl.
+                        Poskytujeme profesionální masáže, které vám pomohou uvolnit se, zlepšit vaši fyzickou i duševní
+                        pohodu a načerpat novou energii. Každá masáž je přizpůsobena vašim individuálním potřebám, ať už
+                        hledáte hluboké uvolnění, regeneraci po fyzické aktivitě nebo chcete jednoduše zklidnit své tělo
+                        a mysl.
+                    </p>
                 </div>
-                <div class="flex w-96 md:w-[800px] mx-auto rounded-xl ">
-                    <div class="w-full bg-background rounded-2xl m-8 md:m-10">
-                        <hr class="h-px w-80 md:w-[720px] bg-textGrey border-0 mb-2">
 
-                        <div class="flex md:flex-row flex-col justify-between my-5">
-                            <div class="flex flex-col justify-center items-center">
-                                <h2 class=" text-xl font-medium text-massageText mb-2">
-                                    Relaxační </h2>
-
-
-                            </div>
-                            <div class="flex flex-col justify-center md:w-2/3">
-                                <p class="text-sm text-textWhite justify-center text-center md:text-start">
-                                    Relaxační masáž je ideální pro odbourání
-                                    stresu, zklidnění nervového systému a obnovu rovnováhy v těle. Jemné a plynulé
-                                    pohyby pomáhají zmírnit napětí ve svalech a dodávají pocit celkového uvolnění.
-                                </p>
-                            </div>
-                        </div>
-                        <hr class="h-px w-80 md:w-[720px] bg-textGrey border-0 ">
-                        <div class="flex md:flex-row flex-col justify-between my-5">
-                            <div class="flex flex-col justify-center items-center">
-                                <h2 class=" text-xl font-medium text-massageText mb-2">
-                                    Sportovní </h2>
-                            </div>
-                            <div class="flex flex-col justify-center md:w-2/3">
-                                <p class="text-sm text-textWhite justify-center text-center md:text-start">
-                                    Navržena pro lidi, kteří chtějí zlepšit výkon nebo zkrátit dobu regenerace
-                                    po náročném fyzickém výkonu. Kombinuje techniky hlubokého uvolnění
-                                    svalů s cílem odstranit zatuhlost a předejít zraněním.
-                                </p>
-                            </div>
-                        </div>
-                        <hr class="h-px w-80 md:w-[720px] bg-textGrey border-0 mb-2">
-
-                        <div class="flex md:flex-row flex-col justify-between my-5">
-                            <div class="flex flex-col justify-center items-center">
-                                <h2 class=" text-xl font-medium text-massageText mb-2">
-                                    Klasická </h2>
-                            </div>
-                            <div class="flex flex-col justify-center md:w-2/3">
-                                <p class="text-sm text-textWhite justify-center text-center md:text-start">
-                                    Tradiční masáž, která využívá dlouhé, plynulé tahy k uvolnění napětí a prokrvení
-                                    svalů. Klasická masáž podporuje celkovou pohodu, uvolňuje svalové napětí a přináší
-                                    úlevu od bolesti. </p>
-                            </div>
-                        </div>
-                        <hr class="h-px w-80 md:w-[720px] bg-textGrey border-0 mb-2">
-
-                        <div class="flex md:flex-row flex-col justify-between my-5">
-                            <div class="flex flex-col justify-center items-center">
-                                <h2 class="text-xl font-medium text-massageText mb-2">
-                                    Reflexní
-                                    (Hloubková) </h2>
-                            </div>
-                            <div class="flex flex-col justify-center md:w-2/3">
-                                <p class="text-sm text-textWhite justify-center text-center md:text-start">
-                                    Tato masáž cílí na konkrétní body v těle s hlubokými tlaky, které pomáhají
-                                    zmírnit
-                                    bolesti a napětí ve svalech. Reflexní masáž je ideální pro ty, kteří
-                                    potřebují intenzivní úlevu od stresu a svalových problémů.
-                                </p>
-                            </div>
-                        </div>
-                        <hr class="h-px w-80 md:w-[720px] bg-textGrey border-0 mb-2">
-                        <div class="flex md:flex-row flex-col justify-between my-5">
-                            <div class="flex flex-col justify-center items-center">
-                                <h2 class="text-xl font-medium text-massageText mb-2">
-                                    Lymfatická</h2>
-                            </div>
-                            <div class="flex flex-col justify-center md:w-2/3">
-                                <p class="text-sm text-textWhite text-center md:text-start justify-center">
-                                    Lymfatická masáž je jemná technika zaměřená na podporu cirkulace lymfy a
-                                    detoxikaci
-                                    těla. Pomáhá při otocích a posiluje imunitní systém.
-                                    Skvělá volba pro ty, kteří chtějí podpořit svůj zdravý životní styl. </p>
-                            </div>
-                        </div>
-                        <hr class="h-px w-80 md:w-[720px] bg-textGrey border-0 mb-2">
+                <!-- right side-->
+                <div class="lg:w-1/4  flex flex-col items-center justify-center bg-massageBg pt-8">
+                    <!-- container 1 -->
+                    <div class="bg-massageCard w-64 p-6 rounded-lg mb-6 flex flex-col items-center text-center">
+                        <img src="./img/massage/15209648731650628459.svg" alt="relax massage" class="mb-4 w-16">
+                        <h2 class="text-2xl font-bold mb-2 text-massageText">Relaxační</h2>
+                        <p class="text-textWhite"> Relaxační masáž je ideální pro odbourání
+                            stresu, zklidnění nervového systému a obnovu rovnováhy v těle.</p>
                     </div>
+
+                    <!-- container 2 -->
+                    <div class="bg-massageCard w-64 p-6 rounded-lg flex flex-col items-center text-center">
+                        <img src="./img/massage/1642233351683955320.svg" alt="sport massage" class="mb-4 w-16">
+                        <h2 class="text-2xl font-bold mb-2 text-massageText">Sportovní</h2>
+                        <p class="text-textWhite"> Navržena pro lidi, kteří chtějí zlepšit výkon nebo zkrátit dobu
+                            regenerace
+                            po náročném fyzickém výkonu.
+                        </p>
+                    </div>
+                </div>
+                <div class="lg:w-1/4  flex flex-col justify-center items-center bg-massageBg pt-8">
+                    <!-- container 3 -->
+                    <div class="bg-massageCard w-64 p-6 rounded-lg mb-6 flex flex-col items-center text-center">
+                        <img src="./img/massage/2832840311650787292.svg" alt="classic massage" class="mb-4 w-16">
+                        <h2 class="text-2xl font-bold mb-2 text-massageText">Klasická</h2>
+                        <p class="text-textWhite"> Tradiční masáž, která využívá dlouhé, plynulé tahy k uvolnění napětí
+                            a prokrvení
+                            svalů.</p>
+                    </div>
+
+                    <!-- container 4-->
+                    <div class="bg-massageCard w-64 p-6 rounded-lg mb-6 flex flex-col items-center text-center">
+                        <img src="./img/massage/17822704481685076684.svg" alt="deep massage" class="mb-4 w-16">
+                        <h2 class="text-2xl font-bold mb-2 text-massageText">Reflexní
+                            (Hloubková)</h2>
+                        <p class="text-textWhite"> Tato masáž cílí na konkrétní body v těle s hlubokými tlaky, které
+                            pomáhají
+                            zmírnit
+                            bolesti a napětí ve svalech.
+                        </p>
+                    </div>
+                    <!-- container 5 -->
+                    <div class="bg-massageCard w-64 p-6 rounded-lg mb-6 flex flex-col items-center text-center">
+                        <img src="./img/massage/9300386821683914956.svg" alt="lymph massage" class="mb-4 w-16">
+                        <h2 class="text-2xl font-bold mb-2 text-massageText">Lymfatická</h2>
+                        <p class="text-textWhite"> Lymfatická masáž je jemná technika zaměřená na podporu cirkulace
+                            lymfy a
+                            detoxikaci
+                            těla.</p>
+                    </div>
+
+
                 </div>
             </div>
         </section>
+        <!-- services end -->
+
         <!-- pricing section -->
         <section id="pricing" class="bg-massageCard">
             <div className="flex md:flex-row flex-col items-center text-center gap-4 mx-auto md:w-full justify-center">
@@ -303,7 +284,7 @@
                             <img src="./img/massage/clock-seven-svgrepo-com.svg" alt="hours"
                                 class=" text-sm font-semibold text-goldenYellow">
                             </img>
-                            <div class="flex flex-col text-textWhite text-sm">
+                            <div class="flex flex-col text-textWhite text-md">
                                 <p>Na objednání</p>
                             </div>
 
@@ -315,7 +296,7 @@
                                 class=" text-sm font-semibold text-goldenYellow">
 
                             </img>
-                            <div class="flex flex-col text-textWhite text-sm">
+                            <div class="flex flex-col text-textWhite text-md">
                                 <p>Na Harfě 916/9a</p>
                                 <p>190 00 Praha 9</p>
                             </div>
@@ -329,7 +310,7 @@
                                 <img src="./img/massage/phone-svgrepo-com.svg" alt="phone"
                                     class="text-sm font-semibold text-goldenYellow">
                                 </img>
-                                <div class="flex flex-col text-textWhite text-sm">
+                                <div class="flex flex-col text-textWhite text-md">
                                     <p>+420 773 989 733</p>
                                 </div>
                             </div>
@@ -338,11 +319,13 @@
                     </div>
                 </div>
                 <hr class="my-5 border-lineGrey sm:mx-auto lg:my-8" />
-                <div class="flex justify-between mx-auto items-center">
+                <div class="flex flex-col gap-5 justify-center mx-auto items-center px-2 pb-4">
+                    <a href="#" class="edit-cookies text-xs text-decentGrey">Upravit nastavení cookies</a>
+
                     <span class="text-xs text-decentGrey">
                         © 2024 CloudyLake. All Rights Reserved.
                     </span>
-                    <a href="#" class="edit-cookies text-xs text-decentGrey">Upravit nastavení cookies</a>
+
                 </div>
         </footer>
         <!-- cookies -->
