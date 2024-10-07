@@ -1556,8 +1556,9 @@ video {
   bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
-  width: 30%;
   z-index: 30;
+  width: 30%;
+  max-width: 600px;
 }
 
 .cookies-eu-banner .cookies-button-accept {
@@ -1574,7 +1575,6 @@ video {
 
 .cookies-eu-banner .cookies-button-decline {
   text-decoration: none;
-  color: #fff;
   color: #212123;
   border: 1px solid #000;
   cursor: pointer;
@@ -1585,7 +1585,8 @@ video {
   transition: background 0.07s, color 0.07s, border-color 0.07s;
 }
 
-.cookies-eu-banner button-accept:hover {
+.cookies-eu-banner .cookies-button-accept:hover,
+.cookies-eu-banner .cookies-button-decline:hover {
   background: #f3e7d6;
   color: #222;
 }
@@ -1611,12 +1612,12 @@ video {
   padding: 50px;
   font-size: 13px;
   text-align: center;
-  items-align: center;
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
   bottom: 10%;
   width: 40%;
+  max-width: 600px;
   z-index: 30;
 }
 
@@ -1628,7 +1629,6 @@ video {
   background: #aa9980;
   color: #fff;
   cursor: pointer;
-  items-align: center;
   padding: 7px 15px;
   margin: 2px 0;
   font-size: 13px;
@@ -1639,6 +1639,42 @@ video {
 .cookies-eu-edit .cookies-button-save:hover {
   background: #f3e7d6;
   color: #222;
+}
+
+/* Responzivní styly pro menší obrazovky */
+
+@media (max-width: 768px) {
+  .cookies-eu-banner,
+  .cookies-eu-edit {
+    width: 90%;
+    padding: 15px;
+    font-size: 12px;
+  }
+
+  .cookies-eu-banner .cookies-button-accept,
+  .cookies-eu-banner .cookies-button-decline,
+  .cookies-eu-banner .cookies-button-edit,
+  .cookies-eu-edit .cookies-button-save {
+    padding: 7px 10px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cookies-eu-banner,
+  .cookies-eu-edit {
+    width: 95%;
+    padding: 10px;
+    font-size: 11px;
+  }
+
+  .cookies-eu-banner .cookies-button-accept,
+  .cookies-eu-banner .cookies-button-decline,
+  .cookies-eu-banner .cookies-button-edit,
+  .cookies-eu-edit .cookies-button-save {
+    padding: 5px 8px;
+    font-size: 11px;
+  }
 }
 
 /* Styl pro switch */
