@@ -661,16 +661,26 @@ video {
   margin-bottom: 1.25rem;
 }
 
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .mb-12 {
   margin-bottom: 3rem;
 }
 
 .mb-2 {
   margin-bottom: 0.5rem;
-}
-
-.mb-20 {
-  margin-bottom: 5rem;
 }
 
 .mb-3 {
@@ -717,36 +727,12 @@ video {
   margin-top: 1rem;
 }
 
-.mt-40 {
-  margin-top: 10rem;
-}
-
 .mt-5 {
   margin-top: 1.25rem;
 }
 
 .mt-6 {
   margin-top: 1.5rem;
-}
-
-.mt-44 {
-  margin-top: 11rem;
-}
-
-.mt-48 {
-  margin-top: 12rem;
-}
-
-.mb-10 {
-  margin-bottom: 2.5rem;
-}
-
-.mt-52 {
-  margin-top: 13rem;
-}
-
-.mt-56 {
-  margin-top: 14rem;
 }
 
 .mt-64 {
@@ -895,10 +881,6 @@ video {
 
 .w-44 {
   width: 11rem;
-}
-
-.w-56 {
-  width: 14rem;
 }
 
 .w-6 {
@@ -1070,18 +1052,6 @@ video {
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 
-.space-y-44 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(11rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(11rem * var(--tw-space-y-reverse));
-}
-
-.space-y-10 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
-}
-
 .self-stretch {
   align-self: stretch;
 }
@@ -1116,11 +1086,6 @@ video {
 
 .border-2 {
   border-width: 2px;
-}
-
-.border-background {
-  --tw-border-opacity: 1;
-  border-color: rgb(33 33 35 / var(--tw-border-opacity));
 }
 
 .border-barberText {
@@ -1236,10 +1201,6 @@ video {
   background-color: rgb(240 240 240 / var(--tw-bg-opacity));
 }
 
-.bg-transparent {
-  background-color: transparent;
-}
-
 .bg-vlastaNav {
   --tw-bg-opacity: 1;
   background-color: rgb(170 153 128 / var(--tw-bg-opacity));
@@ -1312,11 +1273,6 @@ video {
   padding-bottom: 2.5rem;
 }
 
-.py-16 {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -1382,14 +1338,6 @@ video {
 
 .pt-8 {
   padding-top: 2rem;
-}
-
-.pb-10 {
-  padding-bottom: 2.5rem;
-}
-
-.pb-44 {
-  padding-bottom: 11rem;
 }
 
 .text-center {
@@ -1583,24 +1531,8 @@ video {
   opacity: 0.3;
 }
 
-.opacity-80 {
-  opacity: 0.8;
-}
-
 .opacity-50 {
   opacity: 0.5;
-}
-
-.opacity-90 {
-  opacity: 0.9;
-}
-
-.opacity-60 {
-  opacity: 0.6;
-}
-
-.opacity-70 {
-  opacity: 0.7;
 }
 
 .shadow-lg {
@@ -1908,16 +1840,6 @@ label {
   transition-duration: 700ms;
 }
 
-.hover\:bg-\[\#333333\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(51 51 51 / var(--tw-bg-opacity));
-}
-
-.hover\:text-white:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .hover\:before\:-translate-x-40:hover::before {
   content: var(--tw-content);
   --tw-translate-x: -10rem;
@@ -1937,11 +1859,6 @@ label {
 
   .sm\:max-w-\[520px\] {
     max-width: 520px;
-  }
-
-  .sm\:py-48 {
-    padding-top: 12rem;
-    padding-bottom: 12rem;
   }
 }
 
@@ -2074,12 +1991,6 @@ label {
     margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
-  .md\:space-y-44 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-y-reverse: 0;
-    margin-top: calc(11rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(11rem * var(--tw-space-y-reverse));
-  }
-
   .md\:border-2 {
     border-width: 2px;
   }
@@ -2096,6 +2007,11 @@ label {
 
   .md\:p-10 {
     padding: 2.5rem;
+  }
+
+  .md\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 
   .md\:px-44 {
@@ -2119,16 +2035,17 @@ label {
     padding-top: 2rem;
   }
 
-  .md\:pt-9 {
-    padding-top: 2.25rem;
-  }
-
   .md\:text-center {
     text-align: center;
   }
 
   .md\:text-start {
     text-align: start;
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   .md\:text-5xl {
@@ -2141,9 +2058,9 @@ label {
     line-height: 1;
   }
 
-  .md\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }
 
@@ -2195,14 +2112,14 @@ label {
     padding-right: 2rem;
   }
 
-  .lg\:py-16 {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-
   .lg\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .lg\:px-44 {
+    padding-left: 11rem;
+    padding-right: 11rem;
   }
 
   .lg\:text-left {
