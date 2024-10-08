@@ -628,10 +628,6 @@ video {
   float: inline-end;
 }
 
-.float-right {
-  float: right;
-}
-
 .m-3 {
   margin: 0.75rem;
 }
@@ -731,10 +727,6 @@ video {
 
 .mt-6 {
   margin-top: 1.5rem;
-}
-
-.mb-8 {
-  margin-bottom: 2rem;
 }
 
 .block {
@@ -881,6 +873,10 @@ video {
   width: 11rem;
 }
 
+.w-56 {
+  width: 14rem;
+}
+
 .w-6 {
   width: 1.5rem;
 }
@@ -907,10 +903,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-56 {
-  width: 14rem;
 }
 
 .max-w-2xl {
@@ -1090,6 +1082,11 @@ video {
   border-width: 2px;
 }
 
+.border-background {
+  --tw-border-opacity: 1;
+  border-color: rgb(33 33 35 / var(--tw-border-opacity));
+}
+
 .border-barberText {
   --tw-border-opacity: 1;
   border-color: rgb(206 156 97 / var(--tw-border-opacity));
@@ -1117,16 +1114,6 @@ video {
 
 .border-lineGrey {
   border-color: #ffffff1a;
-}
-
-.border-ricanyText {
-  --tw-border-opacity: 1;
-  border-color: rgb(218 200 171 / var(--tw-border-opacity));
-}
-
-.border-background {
-  --tw-border-opacity: 1;
-  border-color: rgb(33 33 35 / var(--tw-border-opacity));
 }
 
 .bg-\[\#f3e7d6\] {
@@ -1231,16 +1218,16 @@ video {
   --tw-bg-opacity: 0.8;
 }
 
-.bg-\[url\(\'\.\/img\/barber\/hair\.jpg\'\)\] {
-  background-image: url('./img/barber/hair.jpg');
-}
-
-.bg-\[url\(\'\.\/img\/vlasta\/apothekary\.webp\'\)\] {
-  background-image: url('./img/vlasta/apothekary.webp');
-}
-
 .bg-\[url\(\'\.\/img\/barber\/barber\.webp\'\)\] {
   background-image: url('./img/barber/barber.webp');
+}
+
+.bg-\[url\(\'\.\/img\/vlasta\/salon\.jpg\'\)\] {
+  background-image: url('./img/vlasta/salon.jpg');
+}
+
+.bg-\[url\(\'\.\/img\/vlasta\/salon2\.jpg\'\)\] {
+  background-image: url('./img/vlasta/salon2.jpg');
 }
 
 .bg-cover {
@@ -1554,10 +1541,6 @@ video {
 
 .opacity-30 {
   opacity: 0.3;
-}
-
-.opacity-50 {
-  opacity: 0.5;
 }
 
 .opacity-80 {
@@ -1928,10 +1911,6 @@ label {
     margin-bottom: 0px;
   }
 
-  .md\:mb-5 {
-    margin-bottom: 1.25rem;
-  }
-
   .md\:block {
     display: block;
   }
@@ -1968,10 +1947,6 @@ label {
     width: 25%;
   }
 
-  .md\:w-2\/3 {
-    width: 66.666667%;
-  }
-
   .md\:w-32 {
     width: 8rem;
   }
@@ -1994,14 +1969,6 @@ label {
 
   .md\:w-full {
     width: 100%;
-  }
-
-  .md\:w-1\/3 {
-    width: 33.333333%;
-  }
-
-  .md\:w-1 {
-    width: 0.25rem;
   }
 
   .md\:grid-cols-3 {
@@ -2180,18 +2147,6 @@ label {
 }
 
 @media (min-width: 1440px) {
-  .\32xl\:w-1\/2 {
-    width: 50%;
-  }
-
-  .\32xl\:w-1\/3 {
-    width: 33.333333%;
-  }
-
-  .\32xl\:w-1\/4 {
-    width: 25%;
-  }
-
   .\32xl\:w-2\/3 {
     width: 66.666667%;
   }
