@@ -729,6 +729,14 @@ video {
   margin-top: 1.5rem;
 }
 
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
+.mb-20 {
+  margin-bottom: 5rem;
+}
+
 .block {
   display: block;
 }
@@ -1220,10 +1228,6 @@ video {
 
 .bg-\[url\(\'\.\/img\/barber\/barber\.webp\'\)\] {
   background-image: url('./img/barber/barber.webp');
-}
-
-.bg-\[url\(\'\.\/img\/vlasta\/salon\.jpg\'\)\] {
-  background-image: url('./img/vlasta/salon.jpg');
 }
 
 .bg-\[url\(\'\.\/img\/vlasta\/salon2\.jpg\'\)\] {
@@ -1909,6 +1913,14 @@ label {
 
   .md\:mb-0 {
     margin-bottom: 0px;
+  }
+
+  .md\:mb-10 {
+    margin-bottom: 2.5rem;
+  }
+
+  .md\:mb-5 {
+    margin-bottom: 1.25rem;
   }
 
   .md\:block {
