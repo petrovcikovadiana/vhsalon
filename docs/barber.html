@@ -8,33 +8,143 @@
     <meta name="description" content="U nás najdete styl, pohodlí a profesionální péči.">
     <meta name="keywords" content="barbershop, pánské holení, pánské účesy, péče o vousy, barber">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        #menu-toggle {
+            position: relative;
+            z-index: 50;
+        }
+
+        /* Basic style menu */
+        #menu-items {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #dac8ab;
+        }
+
+        /* Style to display menu */
+        #menu-items.show {
+            display: flex;
+            flex-direction: column;
+            z-index: 40;
+        }
+
+        @media (min-width: 768px) {
+            #menu-items {
+                display: flex;
+                position: fixed;
+                height: 0;
+                background-color: transparent;
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.getElementById("menu-toggle");
+            const menuItems = document.getElementById("menu-items");
+            const menuIcon = document.getElementById("menu-icon");
+            const menuLinks = menuItems.querySelectorAll("a");
+
+
+            menuToggle.addEventListener("click", function () {
+                menuItems.classList.toggle("hidden");
+                menuItems.classList.toggle("show");
+
+                // Toggle icon
+                if (menuItems.classList.contains("show")) {
+                    menuIcon.innerHTML = '<path d="M6 18L18 6M6 6l12 12" />';
+                } else {
+                    menuIcon.innerHTML = '<path d="M4 6h16M4 12h16M4 18h16" />';
+                }
+            });
+            menuLinks.forEach(link => {
+                link.addEventListener("click", function () {
+                    menuItems.classList.remove("show");
+                    menuItems.classList.add("hidden");
+                    menuIcon.innerHTML = '<path d="M4 6h16M4 12h16M4 18h16" />'; // Reset to hamburger icon
+                });
+            });
+
+            feather.replace();
+        });
+
+
+
+
+    </script>
 </head>
 
+
 <body class="bg-background">
+    <nav id="home" class="flex flex-col fixed w-full z-20 bg-ricanyText">
+        <!-- Navbar -->
+        <div class="flex container mx-auto flex-row justify-between items-center h-18 px-4">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 relative z-50">
+                <img src="./img/barber/logoblack.svg" alt="logo" class="w-20 h-20">
+            </div>
+            <!-- Contact - hidden on mobile -->
+            <div class="hidden md:flex relative z-20">
+                <!-- socials -->
+                <div class="flex text-[20px] gap-x-3 max-w-max mx-auto lg:mx-0">
+
+                    <a href="https://www.instagram.com/vlastabarbershop/"
+                        class="w-6 h-6 flex items-center justify-center">
+                        <img src="./img/vlasta/ig.svg" alt="instagram" />
+                    </a>
+
+                </div>
+            </div>
+            <!-- Hamburger Menu Button -->
+            <button id="menu-toggle" class="md:hidden focus:outline-none">
+                <svg id="menu-icon" class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Menu Items -->
+        <div id="menu-items"
+            class="md:flex md:h-16 items-center w-full justify-start md:justify-center pt-16 md:pt-10 md:absolute z-10 hidden ">
+
+            <ul class="flex flex-col md:flex-row md:space-x-4 items-center">
+                <li><a href="#home" class="block w-full px-5 py-2 text-lg text-black ">Domů</a>
+                </li>
+                <li><a href="#pricing" class="block w-full px-5 py-2 text-lg text-black  ">Ceník</a>
+                </li>
+                <li><a href="#gallery" class="block w-full px-5 py-2 text-lg text-black">Galerie</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
     <!-- Hero Start -->
-    <div class="relative min-h-[70vh] bg-white">
+    <div class="relative min-h-[70vh] bg-black">
         <!-- Background image with opacity -->
-        <div class="absolute inset-0 bg-[url('./img/barber/barber.webp')] bg-cover bg-black bg-center opacity-80">
+        <div class="absolute inset-0 bg-[url('./img/barber/barber.webp')] bg-cover bg-black bg-center opacity-50">
         </div>
         <!-- Text content -->
-        <div class="relative z-10 flex items-center justify-center mx-auto min-h-[70vh] ">
-            <div class="text-center px-10">
-                <img src="./img/barber/logoblack.svg"
-                    class="w-56 items-center object-fit font-bold mx-auto text-white uppercase max-w-2xl md:mb-5 mb-20">
-                </img>
-                <div class="hidden md:flex justify-center items-center gap-x-6 mb-6">
-                    <!-- buttons -->
-                    <button
-                        class="w-36 h-10 overflow-hidden bg-background uppercase  text-ricanyText before:ease relative before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-40">
-                        <span relative="relative z-10 ">Rezervace</span>
-                    </button>
-                    <a href="#pricing">
-                        <button
-                            class="w-36 h-10 overflow-hidden uppercase bg-transparent border-2 border-background text-background before:ease relative before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-40">
-                            <span relative="relative z-10 ">Ceník</span>
-                        </button>
-                    </a>
-                </div>
+        <div class="relative z-10 flex items-center justify-center min-h-[70vh] ">
+            <div class="text-center px-10 mx-auto">
+                <h1 class="text-4xl md:text-4xl font-bold text-ricanyText max-w-2xl ">Dokonalý střih pro každého
+                    muže,
+                    který pečuje o svůj vzhled
+                </h1>
+                <p class="text-xl text-white my-4">Nabízíme precizní pánské střihy a péči o vousy s důrazem na váš
+                    osobitý styl.</p>
+                <!-- Reservation button -->
+                <button
+                    class="flex items-center justify-center mx-auto w-36 h-10 overflow-hidden uppercase bg-ricanyText rounded-xl text-background before:ease relative before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-40">
+                    <p class="text-xl">Rezervace</p>
+                </button>
+
             </div>
         </div>
         <!-- white container -->
@@ -52,7 +162,7 @@
                     </div>
                 </div>
 
-                <div class="flex flex-row md:flex-col gap-2 md:gap-5 items-center">
+                <div class="flex flex-row md:flex-col gap-2 md:gap-5 items-center pb-4">
                     <img src="./img/barber/location-pin-svgrepo-com.svg" alt="location" class="hidden md:block w-8 h-8">
                     <div class="flex flex-col text-background text-sm items-center">
                         <p class="text-background uppercase font-bold text-md mb-3">Adresa</p>
@@ -61,7 +171,7 @@
                     </div>
                 </div>
 
-                <div class="flex flex-row md:flex-col gap-2 md:gap-5 items-center">
+                <div class="flex flex-row md:flex-col gap-2 md:gap-5 items-center pb-4">
                     <img src="./img/barber/phone-svgrepo-com.svg" alt="phone" class="hidden md:block w-8 h-8">
                     <div class="flex flex-col text-background text-sm items-center">
                         <p class="text-background uppercase font-bold text-md mb-3">Telefon</p>
@@ -76,9 +186,9 @@
 
     <!-- pricing section -->
     <section id="pricing">
-        <div className="bg-ricanyText flex md:flex-row flex-col gap-4 mx-auto md:w-full justify-center">
+        <div className="bg-ricanyText flex md:flex-row flex-col gap-4 mx-auto md:w-full justify-center ">
 
-            <div class="flex w-96 md:w-[600px] mx-auto mt-40 bg-ricanyText md:border-2 md:border-ricanyText ">
+            <div class="flex w-96 md:w-[600px] mx-auto mt-64 mb-10 bg-ricanyText md:border-2 md:border-ricanyText ">
                 <div class="w-full bg-ricanyText rounded-2xl m-8 md:m-10">
                     <div class="flex flex-col items-center mx-auto">
                         <img src="./img/barber/logoblack.svg" alt="face" class="object-fit h-24 md:h-32 md:w-32 " />
@@ -144,6 +254,42 @@
         </div>
     </section>
     <!-- pricing end -->
+    <!-- gallery section -->
+    <section id="gallery">
+        <div class="flex items-center justify-center bg-ricanyText">
+
+            <div class="bg-ricanyText p-6 m-3 space-y-6 md:p-10">
+                <!-- title -->
+                <div class="flex flex-col items-center justify-center mx-auto">
+                    <h3 class="uppercase text-2xl text-background tracking-widest font-bold">Galerie</h3>
+                </div>
+
+                <div class="grid gap-5 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                    <div class="relative group">
+                        <img src="img/barber/barber.webp" alt="mirror" class="w-72 h-72 object-cover" />
+
+                    </div>
+
+                    <div class="relative group">
+                        <img src="img/barber/dvere.webp" alt="room" class="w-72 h-72 object-cover" />
+
+
+                    </div>
+
+                    <div class="relative group">
+                        <img src="img/barber/zidle.webp" alt="chair" class="w-72 h-72 object-cover" />
+
+
+                    </div>
+                    <div class="relative group">
+                        <img src="img/vlasta/70841118_2381017045493275_8774339201832321024_n_1_11zon.webp" alt="tools"
+                            class="w-72 h-72 object-cover" />
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- footer start -->
     <footer>
         <div class="mx-auto w-full max-w-screen-xl p-4">
@@ -182,6 +328,7 @@
     <!-- cookies -->
     <div id="cookie-container"></div>
     <script src="cookies.js"></script>
+    <script src="scroll.js"></script>
 </body>
 
 </html>

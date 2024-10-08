@@ -661,16 +661,16 @@ video {
   margin-bottom: 1.25rem;
 }
 
-.mb-10 {
-  margin-bottom: 2.5rem;
-}
-
 .mb-12 {
   margin-bottom: 3rem;
 }
 
 .mb-2 {
   margin-bottom: 0.5rem;
+}
+
+.mb-20 {
+  margin-bottom: 5rem;
 }
 
 .mb-3 {
@@ -729,12 +729,28 @@ video {
   margin-top: 1.5rem;
 }
 
-.mb-16 {
-  margin-bottom: 4rem;
+.mt-44 {
+  margin-top: 11rem;
 }
 
-.mb-20 {
-  margin-bottom: 5rem;
+.mt-48 {
+  margin-top: 12rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mt-52 {
+  margin-top: 13rem;
+}
+
+.mt-56 {
+  margin-top: 14rem;
+}
+
+.mt-64 {
+  margin-top: 16rem;
 }
 
 .block {
@@ -1054,6 +1070,18 @@ video {
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 
+.space-y-44 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(11rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(11rem * var(--tw-space-y-reverse));
+}
+
+.space-y-10 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
+}
+
 .self-stretch {
   align-self: stretch;
 }
@@ -1356,6 +1384,14 @@ video {
   padding-top: 2rem;
 }
 
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
+.pb-44 {
+  padding-bottom: 11rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1549,6 +1585,22 @@ video {
 
 .opacity-80 {
   opacity: 0.8;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.opacity-90 {
+  opacity: 0.9;
+}
+
+.opacity-60 {
+  opacity: 0.6;
+}
+
+.opacity-70 {
+  opacity: 0.7;
 }
 
 .shadow-lg {
@@ -1915,10 +1967,6 @@ label {
     margin-bottom: 0px;
   }
 
-  .md\:mb-10 {
-    margin-bottom: 2.5rem;
-  }
-
   .md\:mb-5 {
     margin-bottom: 1.25rem;
   }
@@ -2026,6 +2074,12 @@ label {
     margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .md\:space-y-44 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(11rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(11rem * var(--tw-space-y-reverse));
+  }
+
   .md\:border-2 {
     border-width: 2px;
   }
@@ -2065,6 +2119,10 @@ label {
     padding-top: 2rem;
   }
 
+  .md\:pt-9 {
+    padding-top: 2.25rem;
+  }
+
   .md\:text-center {
     text-align: center;
   }
@@ -2081,6 +2139,11 @@ label {
   .md\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }
 
