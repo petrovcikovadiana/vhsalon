@@ -636,6 +636,11 @@ video {
   margin: 2rem;
 }
 
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -664,11 +669,6 @@ video {
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
-}
-
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
 }
 
 .mb-10 {
@@ -907,8 +907,20 @@ video {
   width: 24rem;
 }
 
+.w-\[350px\] {
+  width: 350px;
+}
+
 .w-full {
   width: 100%;
+}
+
+.w-\[370px\] {
+  width: 370px;
+}
+
+.w-\[380px\] {
+  width: 380px;
 }
 
 .max-w-2xl {
@@ -1223,8 +1235,32 @@ video {
   background-image: url('./img/vlasta/salon2.jpg');
 }
 
+.bg-\[url\(\'\.\/img\/vlasta\/salon\.jpg\'\)\] {
+  background-image: url('./img/vlasta/salon.jpg');
+}
+
+.bg-\[url\(\'\.\/img\/barber\/zidle\.webp\'\)\] {
+  background-image: url('./img/barber/zidle.webp');
+}
+
+.bg-\[url\(\'\.\/img\/vlasta\/salon2\.webp\'\)\] {
+  background-image: url('./img/vlasta/salon2.webp');
+}
+
+.bg-\[url\(\'\.\/img\/barber\/new\.jpg\'\)\] {
+  background-image: url('./img/barber/new.jpg');
+}
+
+.bg-\[url\(\'\.\/img\/barber\/new\.webp\'\)\] {
+  background-image: url('./img/barber/new.webp');
+}
+
 .bg-cover {
   background-size: cover;
+}
+
+.bg-contain {
+  background-size: contain;
 }
 
 .bg-center {
@@ -2043,24 +2079,19 @@ label {
     text-align: start;
   }
 
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
 
-  .md\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-
   .md\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
-  }
-
-  .md\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
   }
 }
 
@@ -2107,6 +2138,11 @@ label {
     flex-direction: row;
   }
 
+  .lg\:px-44 {
+    padding-left: 11rem;
+    padding-right: 11rem;
+  }
+
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -2115,11 +2151,6 @@ label {
   .lg\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
-  }
-
-  .lg\:px-44 {
-    padding-left: 11rem;
-    padding-right: 11rem;
   }
 
   .lg\:text-left {

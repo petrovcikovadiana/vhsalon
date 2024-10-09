@@ -73,10 +73,6 @@
 
             feather.replace();
         });
-
-
-
-
     </script>
 </head>
 
@@ -87,7 +83,7 @@
         <div class="flex container mx-auto flex-row justify-between items-center h-18 px-4">
             <!-- Logo -->
             <div class="flex items-center space-x-4 relative z-50">
-                <img src="./img/barber/logoblack.svg" alt="logo" class="w-20 h-20">
+                <img src="./img/barber/logoblack.svg" alt="logo" loading="lazy" class="w-20 h-20">
             </div>
             <!-- Contact - hidden on mobile -->
             <div class="hidden md:flex relative z-20">
@@ -96,13 +92,13 @@
 
                     <a href="https://www.instagram.com/vlastabarbershop/"
                         class="w-6 h-6 flex items-center justify-center">
-                        <img src="./img/vlasta/ig.svg" alt="instagram" />
+                        <img src="./img/vlasta/ig.svg" alt="instagram" loading="lazy" />
                     </a>
 
                 </div>
             </div>
             <!-- Hamburger Menu Button -->
-            <button id="menu-toggle" class="md:hidden focus:outline-none">
+            <button id="menu-toggle" aria-label="Open the menu" class="md:hidden focus:outline-none">
                 <svg id="menu-icon" class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
                     <path d="M4 6h16M4 12h16M4 18h16" />
@@ -128,7 +124,7 @@
     <!-- Hero Start -->
     <div class="relative min-h-[70vh] bg-black">
         <!-- Background image with opacity -->
-        <div class="absolute inset-0 bg-[url('./img/barber/barber.webp')] bg-cover bg-black bg-center opacity-50">
+        <div class="absolute inset-0 bg-[url('./img/barber/new.webp')] bg-cover bg-black bg-center opacity-50">
         </div>
         <!-- Text content -->
         <div class="relative z-10 flex items-center justify-center min-h-[60vh] ">
@@ -140,11 +136,12 @@
                 <p class="text-md text-white my-4">Nabízíme precizní pánské střihy a péči o vousy s důrazem na váš
                     osobitý styl.</p>
                 <!-- Reservation button -->
-                <button
-                    class="flex items-center justify-center mx-auto w-36 h-10 overflow-hidden uppercase bg-ricanyText rounded-xl text-background before:ease relative before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-40">
-                    <p class="text-xl">Rezervace</p>
-                </button>
-
+                <a href="https://noona.app/cs/barbershopricany7" target="_blank">
+                    <button
+                        class="flex items-center justify-center mx-auto w-36 h-10 overflow-hidden uppercase bg-ricanyText rounded-xl text-background before:ease relative before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-40">
+                        <p class="text-xl">Rezervace</p>
+                    </button>
+                </a>
             </div>
         </div>
         <!-- white container -->
@@ -153,7 +150,8 @@
             <div
                 class="flex flex-col md:flex-row gap-6 md:gap-24 items-center text-center justify-center mx-auto h-full">
                 <div class="flex flex-row md:flex-col gap-2 md:gap-5 items-center">
-                    <img src="./img/barber/clock-seven-svgrepo-com.svg" alt="phone" class="hidden md:block w-8 h-8">
+                    <img src="./img/barber/clock-seven-svgrepo-com.svg" alt="clock" loading="lazy"
+                        class="hidden md:block w-8 h-8">
                     <div class="flex flex-col text-background text-sm items-center">
                         <p class="text-background uppercase font-bold text-md mb-3">Otevírací doba</p>
                         <p>Po - Pá : 10:00 - 19:00</p>
@@ -163,7 +161,8 @@
                 </div>
 
                 <div class="flex flex-row md:flex-col gap-2 md:gap-5 items-center pb-4">
-                    <img src="./img/barber/location-pin-svgrepo-com.svg" alt="location" class="hidden md:block w-8 h-8">
+                    <img src="./img/barber/location-pin-svgrepo-com.svg" alt="location" loading="lazy"
+                        class="hidden md:block w-8 h-8">
                     <div class="flex flex-col text-background text-sm items-center">
                         <p class="text-background uppercase font-bold text-md mb-3">Adresa</p>
                         <p>Barákova 237/8 Říčany</p>
@@ -172,7 +171,8 @@
                 </div>
 
                 <div class="flex flex-row md:flex-col gap-2 md:gap-5 items-center pb-4">
-                    <img src="./img/barber/phone-svgrepo-com.svg" alt="phone" class="hidden md:block w-8 h-8">
+                    <img src="./img/barber/phone-svgrepo-com.svg" alt="phone" loading="lazy"
+                        class="hidden md:block w-8 h-8">
                     <div class="flex flex-col text-background text-sm items-center">
                         <p class="text-background uppercase font-bold text-md mb-3">Telefon</p>
                         <p class="mb-5">+420 773 989 733</p>
@@ -191,7 +191,8 @@
             <div class="flex w-96 md:w-[600px] mx-auto mt-64 mb-10 bg-ricanyText md:border-2 md:border-ricanyText ">
                 <div class="w-full bg-ricanyText rounded-2xl m-8 md:m-10">
                     <div class="flex flex-col items-center mx-auto">
-                        <img src="./img/barber/logoblack.svg" alt="face" class="object-fit h-24 md:h-32 md:w-32 " />
+                        <img src="./img/barber/logoblack.svg" alt="logo" loading="lazy"
+                            class="object-fit h-24 md:h-32 md:w-32 " />
                     </div>
                     <div class="flex flex-row justify-between my-5">
                         <div class="flex flex-col ">
@@ -266,24 +267,24 @@
 
                 <div class="grid gap-5 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                     <div class="relative group">
-                        <img src="img/barber/barber.webp" alt="mirror" class="w-72 h-72 object-cover" />
+                        <img src="img/barber/barber.webp" alt="mirror" loading="lazy" class="w-72 h-72 object-cover" />
 
                     </div>
 
                     <div class="relative group">
-                        <img src="img/barber/dvere.webp" alt="room" class="w-72 h-72 object-cover" />
+                        <img src="img/barber/dvere.webp" alt="room" loading="lazy" class="w-72 h-72 object-cover" />
 
 
                     </div>
 
                     <div class="relative group">
-                        <img src="img/barber/zidle.webp" alt="chair" class="w-72 h-72 object-cover" />
+                        <img src="img/barber/zidle.webp" alt="chair" loading="lazy" class="w-72 h-72 object-cover" />
 
 
                     </div>
                     <div class="relative group">
                         <img src="img/vlasta/70841118_2381017045493275_8774339201832321024_n_1_11zon.webp" alt="tools"
-                            class="w-72 h-72 object-cover" />
+                            loading="lazy" class="w-72 h-72 object-cover" />
                     </div>
 
                 </div>
@@ -301,10 +302,13 @@
                             Zarezervujte si <span class="text-ricanyText">termín</span> </h3>
                         <p class="text-sm text-textWhite mb-5 ">Naplánujte si svou návštěvu a dopřejte si
                             profesionální péči, která vás osvěží a zvýrazní váš styl. </p>
-                        <button
-                            class="w-32 h-10 overflow-hidden mx-auto md:mx-0 bg-ricanyText uppercase text-background before:ease relative before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-40">
-                            <span relative="relative z-10 ">Rezervace</span>
-                        </button>
+                        <a href="https://noona.app/cs/barbershopricany7" target="_blank">
+
+                            <button
+                                class="w-32 h-10 overflow-hidden mx-auto md:mx-0 bg-ricanyText uppercase text-background before:ease relative before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-40">
+                                <span relative="relative z-10 ">Rezervace</span>
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -318,7 +322,7 @@
                 </span>
                 <div class="flex text-[20px] gap-x-3 max-w-max float-end lg:mx-0">
                     <a href="https://www.instagram.com/barbershopricany/" class="w-6 h-6">
-                        <img src="./img/barber/ig.svg" alt="instagram" />
+                        <img src="./img/barber/ig.svg" alt="instagram" loading="lazy" />
                     </a>
                 </div>
             </div>
