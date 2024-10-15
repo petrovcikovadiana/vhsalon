@@ -646,6 +646,11 @@ video {
   margin-right: auto;
 }
 
+.my-1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -806,6 +811,10 @@ video {
   height: 100vh;
 }
 
+.h-5 {
+  height: 1.25rem;
+}
+
 .min-h-\[1em\] {
   min-height: 1em;
 }
@@ -890,6 +899,10 @@ video {
   width: 100%;
 }
 
+.w-9 {
+  width: 2.25rem;
+}
+
 .max-w-2xl {
   max-width: 42rem;
 }
@@ -939,6 +952,20 @@ video {
 
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
+
+.appearance-none {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .grid-cols-2 {
@@ -1153,6 +1180,11 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-gray-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-80 {
@@ -1459,6 +1491,16 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-75 {
+  transition-duration: 75ms;
+}
+
 .angled-line::before {
   content: "";
   position: absolute;
@@ -1661,12 +1703,63 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+.slider-tech {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider-tech:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider-tech {
+  background-color: #ccc;
+}
+
+input:checked + .slider-tech:before {
+  transform: translateX(20px);
+}
+
+/* Zaoblení slideru */
+
+.slider-tech.round {
+  border-radius: 36px;
+}
+
+.slider-tech.round:before {
+  border-radius: 50%;
+}
+
 /* Přidáno pro správné zarovnání textu a switcherů */
 
 label {
   display: flex;
   align-items: center;
   width: 100%;
+}
+
+.toggle-label {
+  width: 40px;
+  height: 16px;
+  background-color: #bbb;
+  display: block;
+  position: relative;
+  transition: background-color 0.3s ease-in-out;
 }
 
 @media (min-width: 768px) {
@@ -1758,6 +1851,20 @@ label {
   transition-duration: 700ms;
 }
 
+.hover\:border-transparent:hover {
+  border-color: transparent;
+}
+
+.hover\:bg-\[\#aa9980\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(170 153 128 / var(--tw-bg-opacity));
+}
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .hover\:before\:-translate-x-40:hover::before {
   content: var(--tw-content);
   --tw-translate-x: -10rem;
@@ -1767,6 +1874,11 @@ label {
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.disabled\:bg-gray-500:disabled {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 640px) {

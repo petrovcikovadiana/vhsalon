@@ -38,7 +38,7 @@
                         cookies</span>
                     <div class="switch">
                         <input type="checkbox" id="technical-cookies" checked disabled>
-                        <span class="slider round"></span>
+                        <span class="slider-tech round"></span>
                     </div>
                 </div>
 
@@ -62,9 +62,20 @@
                 </div>
             </label>
         </div>
-        <div class="flex flex-row gap-5 mx-auto items-center justify-center mt-4">
-            <button class="cookies-button-save save">Uložit nastavení</button>
-            <button class="cookies-button-cancel cancel">Zrušit</button>
+        <div class="flex flex-row gap-5 mx-auto items-center justify-between mt-4">
+            <div class="flex flex-row gap-5  items-center justify-center">
+                <button
+                    class="cookies-button-accept accept bg-vlastaNav text-white cursor-pointer px-4 py-2 my-1 text-sm font-bold transition-colors duration-75 hover:bg-[#aa9980] hover:text-white hover:border-transparent">Povolit
+                    vše</button>
+                <button
+                    class="cookies-button-decline decline bg-vlastaNav text-white cursor-pointer px-4 py-2 my-1 text-sm font-bold transition-colors duration-75 hover:bg-[#aa9980] hover:text-white hover:border-transparent">Odmítnout
+                    vše</button>
+
+            </div>
+            <div> <button class="cookies-button-save save">Uložit nastavení</button>
+                <!-- <button class="cookies-button-cancel cancel">Zrušit</button> -->
+            </div>
+
         </div>
     </div>
     <div id="cookie-container"></div>

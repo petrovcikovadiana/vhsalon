@@ -201,9 +201,59 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+.slider-tech {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider-tech:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider-tech {
+  background-color: #ccc;
+}
+
+input:checked + .slider-tech:before {
+  transform: translateX(20px);
+}
+
+/* Zaoblení slideru */
+.slider-tech.round {
+  border-radius: 36px;
+}
+
+.slider-tech.round:before {
+  border-radius: 50%;
+}
+
 /* Přidáno pro správné zarovnání textu a switcherů */
 label {
   display: flex;
   align-items: center;
   width: 100%;
+}
+
+.toggle-label {
+  width: 40px;
+  height: 16px;
+  background-color: #bbb;
+  display: block;
+  position: relative;
+  transition: background-color 0.3s ease-in-out;
 }
